@@ -17,6 +17,7 @@
 
 [node name="Level1" type="Node2D"]
 script = ExtResource( 1 )
+winning_screen = "res://EndMenu.tscn"
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
 

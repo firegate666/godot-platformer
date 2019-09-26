@@ -1,5 +1,6 @@
 extends Node2D
 
+export(String, FILE, "*.tscn") var winning_screen
 var collectable_count
 
 func _ready():
@@ -20,4 +21,4 @@ func _on_coin_collected(value):
 		
 func _on_level_finished():
 	print("_on_level_finished");
-	get_tree().change_scene("res://EndMenu.tscn")
+	get_tree().change_scene(winning_screen)

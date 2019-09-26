@@ -6,6 +6,7 @@
 anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 1 )
+first_world = "res://Level1.tscn"
 
 [node name="CenterContainer" type="CenterContainer" parent="."]
 anchor_left = 0.5
