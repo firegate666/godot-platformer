@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Level1.gd" type="Script" id=1]
 [ext_resource path="res://Player.tscn" type="PackedScene" id=2]
@@ -10,6 +10,8 @@
 [ext_resource path="res://Assets/Fantasy Free Game Kit/Objects and Power Ups/PNG/Chest_01.png" type="Texture" id=8]
 [ext_resource path="res://Assets/Fantasy Free Game Kit/Objects and Power Ups/PNG/Heart.png" type="Texture" id=9]
 [ext_resource path="res://DeathZone.gd" type="Script" id=10]
+[ext_resource path="res://Assets/Audio/Loop.wav" type="AudioStream" id=11]
+[ext_resource path="res://AudioStreamPlayer.gd" type="Script" id=12]
 
 [sub_resource type="LineShape2D" id=1]
 
@@ -107,3 +109,8 @@ script = ExtResource( 10 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DeathZone"]
 shape = SubResource( 1 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 11 )
+autoplay = true
+script = ExtResource( 12 )

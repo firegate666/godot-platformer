@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Coin.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Fantasy Free Game Kit/Objects and Power Ups/PNG/Coins_00.png" type="Texture" id=2]
 [ext_resource path="res://Assets/Fantasy Free Game Kit/Objects and Power Ups/PNG/Coins_01.png" type="Texture" id=3]
 [ext_resource path="res://Assets/Fantasy Free Game Kit/Objects and Power Ups/PNG/Coins_02.png" type="Texture" id=4]
 [ext_resource path="res://Assets/Fantasy Free Game Kit/Objects and Power Ups/PNG/Coins_03.png" type="Texture" id=5]
+[ext_resource path="res://Assets/Audio/Picked Coin Echo.wav" type="AudioStream" id=6]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -32,3 +33,6 @@ animation = "Turn"
 position = Vector2( 915.986, 234.508 )
 scale = Vector2( 0.5, 0.5 )
 shape = SubResource( 2 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 6 )
