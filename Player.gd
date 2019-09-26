@@ -24,4 +24,4 @@ func _physics_process(delta):
 			print("ui up")
 			motion.y = -JUMP_SPEED
 	
-	motion = move_and_slide(motion, Vector2(0, -1))
+	motion = move_and_slide(motion, Vector2(0, -1), STOP_ON_SLOPE)
