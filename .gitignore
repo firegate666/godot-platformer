@@ -10,3 +10,6 @@ data_*/
 # os type shit
 .DS_Store
 
+# output folder
+/Exports
+
