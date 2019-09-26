@@ -1,7 +1,7 @@
 extends KinematicBody2D
 
 const MOVE_SPEED = 200
-const GRAVITY = 10
+const GRAVITY = 50
 
 var motion = Vector2(0,0)
 
