@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Player.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Fantasy Free Game Kit/Characters/Hero - Wizard/PNG/FW_Hero_1_Walking__000.png" type="Texture" id=2]
@@ -6,6 +6,10 @@
 [ext_resource path="res://Assets/Fantasy Free Game Kit/Background and Tilesets/Forest_2048x1536/PNG/BG_2_Clouds.png" type="Texture" id=4]
 [ext_resource path="res://Assets/Fantasy Free Game Kit/Background and Tilesets/Forest_2048x1536/PNG/BG_5_Forest_2.png" type="Texture" id=5]
 [ext_resource path="res://TileSet/ForestTileSet.tres" type="TileSet" id=6]
+[ext_resource path="res://Coin.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Assets/Fantasy Free Game Kit/Background and Tilesets/Objects/PNG/Sign_1.png" type="Texture" id=8]
+[ext_resource path="res://IngameUI.gd" type="Script" id=9]
+[ext_resource path="res://ResourcePanel.gd" type="Script" id=10]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 34.7169
@@ -27,11 +31,11 @@ texture = ExtResource( 2 )
 shape = SubResource( 1 )
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
+editor/display_folded = true
 current = true
 zoom = Vector2( 1.5, 1.5 )
 drag_margin_h_enabled = false
 drag_margin_v_enabled = false
-smoothing_enabled = true
 smoothing_speed = 10.0
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="Player/Camera2D"]
@@ -69,3 +73,54 @@ scale = Vector2( 0.5, 0.5 )
 tile_set = ExtResource( 6 )
 format = 1
 tile_data = PoolIntArray( 655374, 7, 0, 655378, 8, 0, 655382, 23, 0, 655386, 23, 0, 655390, 6, 0, 917506, 0, 0, 917510, 3, 0, 917514, 3, 0, 917518, 15, 0, 917522, 17, 0, 917534, 18, 0, 917538, 19, 0, 1048618, 14, 0, 1048622, 3, 0, 1048626, 3, 0, 1048630, 6, 0, 1245178, 7, 0, 1245182, 8, 0, 1179650, 15, 0, 1179654, 10, 0, 1179658, 10, 0, 1179662, 10, 0, 1179666, 38, 0, 1179678, 35, 0, 1179682, 26, 0, 1310762, 20, 0, 1310766, 10, 0, 1310770, 10, 0, 1310774, 26, 0 )
+
+[node name="Coin" parent="." instance=ExtResource( 7 )]
+
+[node name="Coin2" parent="." instance=ExtResource( 7 )]
+position = Vector2( 628.62, 182.335 )
+
+[node name="Coin3" parent="." instance=ExtResource( 7 )]
+position = Vector2( 229.221, 125.029 )
+
+[node name="Sign_1" type="Sprite" parent="."]
+position = Vector2( 196.819, 393.722 )
+texture = ExtResource( 8 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="IngameUI" type="Control" parent="CanvasLayer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 9 )
+
+[node name="ResourcePanel" type="Panel" parent="CanvasLayer/IngameUI"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -128.0
+margin_right = 128.0
+margin_bottom = 64.0
+rect_clip_content = true
+script = ExtResource( 10 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/IngameUI/ResourcePanel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="CoinsTitle" type="Label" parent="CanvasLayer/IngameUI/ResourcePanel/HBoxContainer"]
+margin_right = 126.0
+margin_bottom = 64.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "COINS"
+align = 1
+valign = 1
+
+[node name="CoinsValue" type="Label" parent="CanvasLayer/IngameUI/ResourcePanel/HBoxContainer"]
+margin_left = 130.0
+margin_right = 256.0
+margin_bottom = 64.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "0"
+align = 1
+valign = 1

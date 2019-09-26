@@ -18,10 +18,9 @@ func _physics_process(delta):
 		$Sprite.flip_h = true
 	else:
 		motion.x = 0
-		
+
 	if (is_on_floor()):
 		if Input.is_action_just_pressed("ui_up"):
-			print("ui up")
 			motion.y = -JUMP_SPEED
 	
 	motion = move_and_slide(motion, Vector2(0, -1), STOP_ON_SLOPE)
