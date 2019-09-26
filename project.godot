@@ -16,7 +16,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Platformer Run 2"
-run/main_scene="res://Level1.tscn"
+run/main_scene="res://StartMenu.tscn"
 config/icon="res://icon.png"
 
 [autoload]
