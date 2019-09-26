@@ -1,8 +1,11 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Player.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Fantasy Free Game Kit/Characters/Hero - Wizard/PNG/FW_Hero_1_Walking__000.png" type="Texture" id=2]
-[ext_resource path="res://TileSet/ForestTileSet.tres" type="TileSet" id=3]
+[ext_resource path="res://Assets/Fantasy Free Game Kit/Background and Tilesets/Forest_2048x1536/PNG/BG_1.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Fantasy Free Game Kit/Background and Tilesets/Forest_2048x1536/PNG/BG_2_Clouds.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Fantasy Free Game Kit/Background and Tilesets/Forest_2048x1536/PNG/BG_5_Forest_2.png" type="Texture" id=5]
+[ext_resource path="res://TileSet/ForestTileSet.tres" type="TileSet" id=6]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 34.7169
@@ -11,7 +14,7 @@ height = 112.293
 [node name="Node2D" type="Node2D"]
 
 [node name="Player" type="KinematicBody2D" parent="."]
-position = Vector2( 301.171, 169.409 )
+position = Vector2( 362.691, 160.62 )
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
@@ -25,10 +28,44 @@ shape = SubResource( 1 )
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 current = true
+zoom = Vector2( 1.5, 1.5 )
+drag_margin_h_enabled = false
+drag_margin_v_enabled = false
 smoothing_enabled = true
+smoothing_speed = 10.0
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="Player/Camera2D"]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="Player/Camera2D/ParallaxBackground"]
+motion_scale = Vector2( 0.2, 0.2 )
+motion_mirroring = Vector2( 2048, 0 )
+
+[node name="BG_1" type="Sprite" parent="Player/Camera2D/ParallaxBackground/ParallaxLayer"]
+texture = ExtResource( 3 )
+
+[node name="BG_2" type="Sprite" parent="Player/Camera2D/ParallaxBackground/ParallaxLayer"]
+position = Vector2( 0, 1536 )
+scale = Vector2( 1, -1 )
+texture = ExtResource( 3 )
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="Player/Camera2D/ParallaxBackground"]
+motion_scale = Vector2( 0.4, 0.4 )
+motion_mirroring = Vector2( 2048, 0 )
+
+[node name="BG_2_Clouds" type="Sprite" parent="Player/Camera2D/ParallaxBackground/ParallaxLayer2"]
+texture = ExtResource( 4 )
+
+[node name="ParallaxLayer5" type="ParallaxLayer" parent="Player/Camera2D/ParallaxBackground"]
+visible = false
+position = Vector2( 0.6, 0.6 )
+motion_scale = Vector2( 0.6, 0.6 )
+motion_mirroring = Vector2( 2048, 0 )
+
+[node name="BG_5_Forest_2" type="Sprite" parent="Player/Camera2D/ParallaxBackground/ParallaxLayer5"]
+texture = ExtResource( 5 )
 
 [node name="TileMap" type="TileMap" parent="."]
 scale = Vector2( 0.5, 0.5 )
-tile_set = ExtResource( 3 )
+tile_set = ExtResource( 6 )
 format = 1
-tile_data = PoolIntArray( 655374, 7, 0, 655378, 8, 0, 655382, 23, 0, 655386, 23, 0, 655390, 6, 0, 917506, 0, 0, 917510, 3, 0, 917514, 3, 0, 917518, 15, 0, 917522, 17, 0, 917534, 18, 0, 917538, 1, 0 )
+tile_data = PoolIntArray( 655374, 7, 0, 655378, 8, 0, 655382, 23, 0, 655386, 23, 0, 655390, 6, 0, 917506, 0, 0, 917510, 3, 0, 917514, 3, 0, 917518, 15, 0, 917522, 17, 0, 917534, 18, 0, 917538, 19, 0, 1048618, 14, 0, 1048622, 3, 0, 1048626, 3, 0, 1048630, 6, 0, 1245178, 7, 0, 1245182, 8, 0, 1179650, 15, 0, 1179654, 10, 0, 1179658, 10, 0, 1179662, 10, 0, 1179666, 38, 0, 1179678, 35, 0, 1179682, 26, 0, 1310762, 20, 0, 1310766, 10, 0, 1310770, 10, 0, 1310774, 26, 0 )
