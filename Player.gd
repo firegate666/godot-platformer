@@ -1,8 +1,9 @@
 extends KinematicBody2D
 
-export var MOVE_SPEED = 200
-export var JUMP_SPEED = 1500
-export var GRAVITY = 50
+const MOVE_SPEED = 400
+const JUMP_SPEED = 1500
+const GRAVITY = 50
+const STOP_ON_SLOPE = true
 
 var motion = Vector2(0,0)
 
