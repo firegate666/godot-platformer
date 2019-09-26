@@ -13,3 +13,6 @@ data_*/
 # output folder
 /Exports
 
+# secrets
+debug.keystore
+
