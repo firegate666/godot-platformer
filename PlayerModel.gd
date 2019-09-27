@@ -2,7 +2,7 @@ extends Node
 class_name PlayerModel
 
 # total coins for the player
-var coins_collected_safe = 11
+var coins_collected_safe = 0
 
 # current coins from level
 var coins_collected_unsafe = 0
