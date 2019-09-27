@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Level1.gd" type="Script" id=1]
 [ext_resource path="res://Player.tscn" type="PackedScene" id=2]
@@ -12,12 +12,12 @@
 [ext_resource path="res://DeathZone.gd" type="Script" id=10]
 [ext_resource path="res://Assets/Audio/Loop.wav" type="AudioStream" id=11]
 [ext_resource path="res://AudioStreamPlayer.gd" type="Script" id=12]
+[ext_resource path="res://LevelWarp.tscn" type="PackedScene" id=13]
 
 [sub_resource type="LineShape2D" id=1]
 
 [node name="Level1" type="Node2D"]
 script = ExtResource( 1 )
-winning_screen = "res://EndMenu.tscn"
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
 
@@ -115,3 +115,7 @@ shape = SubResource( 1 )
 stream = ExtResource( 11 )
 autoplay = true
 script = ExtResource( 12 )
+
+[node name="LevelWarp" parent="." instance=ExtResource( 13 )]
+position = Vector2( -172.379, 455.75 )
+next_world = "res://EndMenu.tscn"
