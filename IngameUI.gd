@@ -1,10 +1,7 @@
 extends Control
 
-var coins = 0
-
 func _ready():
-	SignalBus.connect("player_coin_collected", self, "_on_coin_collected")
+	SignalBus.connect("player_model_updated", self, "_on_player_model_updated")
 	
-func _on_coin_collected(value):
-	coins += value
-	$ResourcePanel/HBoxContainer/CoinsValue.text = str(coins)
+func _on_player_model_updated(player_model):
+	$ResourcePanel/HBoxContainer/CoinsValue.text = str(player_model.coins_collected)
