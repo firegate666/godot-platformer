@@ -59,7 +59,7 @@ texture = ExtResource( 4 )
 expand = true
 stretch_mode = 5
 
-[node name="CoinsValue2" type="Label" parent="ResourcePanel/HBoxContainer"]
+[node name="HeartsValue" type="Label" parent="ResourcePanel/HBoxContainer"]
 margin_left = 186.0
 margin_right = 246.0
 margin_bottom = 38.0

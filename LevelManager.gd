@@ -10,7 +10,10 @@ func _ready():
 	SignalBus.connect("player_died", self, "_on_player_died")
 
 func _on_player_died():
-	get_tree().reload_current_scene()
+	if (PlayerModel.hearts > 0):
+		get_tree().reload_current_scene()
+	else:
+		get_tree().change_scene("res://GameOver.tscn")
 
 func _on_coin_collected(value):
 	print("_on_coin_collected")

@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://StartMenu.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Fantasy Free Game Kit/Characters/Hero - Wizard/PNG/Attack_No_Weapon/FW_Hero_1_Attack_2__000.png" type="Texture" id=2]
 
 [node name="StartMenu" type="Control"]
 anchor_right = 1.0
@@ -19,26 +20,35 @@ margin_right = 160.0
 margin_bottom = 320.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
-margin_left = 125.0
-margin_top = 289.0
-margin_right = 195.0
-margin_bottom = 351.0
+margin_left = 88.0
+margin_top = 204.0
+margin_right = 232.0
+margin_bottom = 435.0
 
-[node name="Label" type="Label" parent="CenterContainer/VBoxContainer"]
-margin_right = 70.0
-margin_bottom = 14.0
-text = "Jump'n'Run"
+[node name="TextureRect" type="TextureRect" parent="CenterContainer/VBoxContainer"]
+margin_right = 144.0
+margin_bottom = 207.0
+texture = ExtResource( 2 )
 
-[node name="StartButton" type="Button" parent="CenterContainer/VBoxContainer"]
-margin_top = 18.0
-margin_right = 70.0
-margin_bottom = 38.0
+[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer/VBoxContainer"]
+margin_top = 211.0
+margin_right = 144.0
+margin_bottom = 231.0
+
+[node name="StartButton" type="Button" parent="CenterContainer/VBoxContainer/HBoxContainer"]
+margin_right = 50.0
+margin_bottom = 20.0
 text = "START"
 
-[node name="QuitButton" type="Button" parent="CenterContainer/VBoxContainer"]
-margin_top = 42.0
-margin_right = 70.0
-margin_bottom = 62.0
+[node name="VSeparator" type="VSeparator" parent="CenterContainer/VBoxContainer/HBoxContainer"]
+margin_left = 54.0
+margin_right = 58.0
+margin_bottom = 20.0
+
+[node name="QuitButton" type="Button" parent="CenterContainer/VBoxContainer/HBoxContainer"]
+margin_left = 62.0
+margin_right = 107.0
+margin_bottom = 20.0
 text = "QUIT"
-[connection signal="pressed" from="CenterContainer/VBoxContainer/StartButton" to="." method="_on_StartButton_pressed"]
-[connection signal="pressed" from="CenterContainer/VBoxContainer/QuitButton" to="." method="_on_QuitButton_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/HBoxContainer/StartButton" to="." method="_on_StartButton_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/HBoxContainer/QuitButton" to="." method="_on_QuitButton_pressed"]

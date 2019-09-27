@@ -1,8 +1,8 @@
 [gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://Assets/Fantasy Free Game Kit/Objects and Power Ups/PNG/Shield.png" type="Texture" id=1]
+[ext_resource path="res://Assets/Fantasy Free Game Kit/Objects and Power Ups/PNG/Tombstone.png" type="Texture" id=1]
 
-[node name="EndMenu" type="Control"]
+[node name="GameOver" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 
@@ -11,21 +11,21 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
-margin_left = 528.0
-margin_top = 210.0
-margin_right = 751.0
-margin_bottom = 509.0
+margin_left = 527.0
+margin_top = 216.0
+margin_right = 753.0
+margin_bottom = 503.0
 
 [node name="Label" type="Label" parent="CenterContainer/VBoxContainer"]
-margin_right = 223.0
+margin_right = 226.0
 margin_bottom = 31.0
-text = "YOU WON,
+text = "YOU LOST,
 GAME OVER!"
 align = 1
 valign = 1
 
 [node name="TextureRect" type="TextureRect" parent="CenterContainer/VBoxContainer"]
 margin_top = 35.0
-margin_right = 223.0
-margin_bottom = 299.0
+margin_right = 226.0
+margin_bottom = 287.0
 texture = ExtResource( 1 )
