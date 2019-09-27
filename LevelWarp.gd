@@ -11,6 +11,7 @@ func _ready():
 
 func _on_body_entered(body):
 	if (is_active && body.name == "Player"):
+		SignalBus.emit_signal("level_warp")
 		get_tree().change_scene(next_world)
 
 func _on_level_finished():

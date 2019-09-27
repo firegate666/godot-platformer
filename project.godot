@@ -9,12 +9,18 @@
 config_version=4
 
 _global_script_classes=[ {
+"base": "Node2D",
+"class": "LevelManager",
+"language": "GDScript",
+"path": "res://LevelManager.gd"
+}, {
 "base": "Node",
 "class": "PlayerModel",
 "language": "GDScript",
 "path": "res://PlayerModel.gd"
 } ]
 _global_script_class_icons={
+"LevelManager": "",
 "PlayerModel": ""
 }
 
