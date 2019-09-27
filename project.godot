@@ -36,6 +36,7 @@ config/icon="res://icon.png"
 
 SignalBus="*res://SignalBus.gd"
 PlayerModel="*res://PlayerModel.gd"
+SceneLoader="*res://SceneLoader.gd"
 
 [display]
 

@@ -11,9 +11,9 @@ func _ready():
 
 func _on_player_died():
 	if (PlayerModel.hearts > 0):
-		get_tree().reload_current_scene()
+		SignalBus.emit_signal("request_reload_scene")
 	else:
-		get_tree().change_scene("res://GameOver.tscn")
+		SignalBus.emit_signal("request_change_scene", "res://GameOver.tscn")
 
 func _on_coin_collected(value):
 	print("_on_coin_collected")
