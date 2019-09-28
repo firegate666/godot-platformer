@@ -9,7 +9,7 @@ var coins_collected_unsafe = 0
 
 var hearts = 3
 
-func _ready(): 
+func _ready():
 	SignalBus.connect("player_coin_collected", self, "_on_coin_collected")
 	SignalBus.connect("level_warp", self, "_on_level_warp")
 	SignalBus.connect("player_died", self, "_on_player_died")

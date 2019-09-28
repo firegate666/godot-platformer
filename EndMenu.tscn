@@ -14,18 +14,25 @@ anchor_bottom = 1.0
 margin_left = 528.0
 margin_top = 210.0
 margin_right = 751.0
-margin_bottom = 509.0
+margin_bottom = 510.0
 
 [node name="Label" type="Label" parent="CenterContainer/VBoxContainer"]
 margin_right = 223.0
-margin_bottom = 31.0
-text = "YOU WON,
-GAME OVER!"
+margin_bottom = 14.0
+text = "LABEL_YOU_WON"
+align = 1
+valign = 1
+
+[node name="Label2" type="Label" parent="CenterContainer/VBoxContainer"]
+margin_top = 18.0
+margin_right = 223.0
+margin_bottom = 32.0
+text = "LABEL_GAME_OVER"
 align = 1
 valign = 1
 
 [node name="TextureRect" type="TextureRect" parent="CenterContainer/VBoxContainer"]
-margin_top = 35.0
+margin_top = 36.0
 margin_right = 223.0
-margin_bottom = 299.0
+margin_bottom = 300.0
 texture = ExtResource( 1 )

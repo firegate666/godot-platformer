@@ -1,0 +1,7 @@
+id,de,en
+BUTTON_START,"Starten","Start"
+BUTTON_QUIT,"Beenden","Quit"
+LABEL_YOU_WON,"Du hast gewonnen.","You won."
+LABEL_YOU_LOST,"Du hast verloren.","You lost."
+LABEL_GAME_OVER,"Game over!","Game over!"
+
