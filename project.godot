@@ -56,7 +56,7 @@ lang_switch={
 
 [locale]
 
-translations=PoolStringArray( "res://Lang/translations.csv", "res://Lang/translations.de.translation", "res://Lang/translations.en.translation" )
+translations=PoolStringArray( "res://Lang/translations.de.translation", "res://Lang/translations.en.translation" )
 locale_filter=[ 1, [ "de", "en" ] ]
 
 [logging]
