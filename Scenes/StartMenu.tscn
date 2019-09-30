@@ -4,7 +4,6 @@
 [ext_resource path="res://Scenes/Level/Level1.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Assets/Fantasy Free Game Kit/Characters/Hero - Wizard/PNG/Attack_No_Weapon/FW_Hero_1_Attack_2__000.png" type="Texture" id=3]
 
-
 [node name="StartMenu" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0

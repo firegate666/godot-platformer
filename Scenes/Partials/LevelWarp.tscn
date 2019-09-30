@@ -3,7 +3,6 @@
 [ext_resource path="res://Scripts/Game/LevelWarp.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Fantasy Free Game Kit/Objects and Power Ups/PNG/Key.png" type="Texture" id=2]
 
-
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 16, 64, 0, 128, 128, 48, 150 )
 

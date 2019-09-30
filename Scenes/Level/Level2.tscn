@@ -11,7 +11,7 @@
 [ext_resource path="res://Assets/Audio/Loop.wav" type="AudioStream" id=9]
 [ext_resource path="res://Scripts/Game/AudioStreamPlayer.gd" type="Script" id=10]
 [ext_resource path="res://Scenes/Partials/LevelWarp.tscn" type="PackedScene" id=11]
-[ext_resource path="res://Scenes/EndMenu.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Scenes/Level/Level3.tscn" type="PackedScene" id=12]
 
 [sub_resource type="LineShape2D" id=1]
 
