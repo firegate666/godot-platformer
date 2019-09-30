@@ -9,4 +9,5 @@ signal level_finished
 signal level_warp
 
 signal request_change_scene(path)
+signal request_change_packed_scene(packed_scene)
 signal request_reload_scene

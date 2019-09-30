@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scenes/LevelEnd.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/GameOver.tscn" type="PackedScene" id=2]
+
+[node name="LevelEnd" type="Node"]
+script = ExtResource( 1 )
+game_over_scene = ExtResource( 2 )

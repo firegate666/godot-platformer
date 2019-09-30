@@ -27,7 +27,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Platformer"
-run/main_scene="res://StartMenu.tscn"
+run/main_scene="res://Scenes/StartMenu.tscn"
 config/use_custom_user_dir=true
 config/custom_user_dir_name=".platformer"
 config/icon="res://icon.png"

@@ -12,7 +12,7 @@ func _ready():
 func reload_scene():
 	goto_scene(current_path)
 
-func goto_scene(path):
+func goto_scene(packed_scene: PackedScene):
 	# This function will usually be called from a signal callback,
 	# or some other function in the current scene.
 	# Deleting the current scene at this point is
@@ -22,20 +22,19 @@ func goto_scene(path):
 	# The solution is to defer the load to a later time, when
 	# we can be sure that no code from the current scene is running:
 	
-	call_deferred("_deferred_goto_scene", path)
+	call_deferred("_deferred_goto_scene", packed_scene)
 
-
-func _deferred_goto_scene(path):
+func _deferred_goto_scene(packed_scene: PackedScene):
 	# It is now safe to remove the current scene
 	current_scene.free()
 	current_path = null
 	
 	# Load the new scene.
-	var s = ResourceLoader.load(path)
+	var s = ResourceLoader.load(packed_scene.resource_path)
 	
 	# Instance the new scene.
 	current_scene = s.instance()
-	current_path = path
+	current_path = packed_scene
 	
 	# Add it to the active scene, as child of root.
 	get_tree().get_root().add_child(current_scene)

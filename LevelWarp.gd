@@ -1,6 +1,7 @@
 extends Area2D
 
-export(String, FILE, "*.tscn") var next_world
+export (PackedScene) var next_world: PackedScene
+
 var is_active : bool
 
 func _ready():

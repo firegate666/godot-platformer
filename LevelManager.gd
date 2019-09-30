@@ -13,7 +13,7 @@ func _on_player_died():
 	if (PlayerModel.hearts > 0):
 		SignalBus.emit_signal("request_reload_scene")
 	else:
-		SignalBus.emit_signal("request_change_scene", "res://GameOver.tscn")
+		$LevelEnd._on_player_died()
 
 func _on_coin_collected(value):
 	print("_on_coin_collected")

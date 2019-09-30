@@ -1,13 +1,14 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://StartMenu.gd" type="Script" id=1]
-[ext_resource path="res://Assets/Fantasy Free Game Kit/Characters/Hero - Wizard/PNG/Attack_No_Weapon/FW_Hero_1_Attack_2__000.png" type="Texture" id=2]
+[ext_resource path="res://Scenes/Level1.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Assets/Fantasy Free Game Kit/Characters/Hero - Wizard/PNG/Attack_No_Weapon/FW_Hero_1_Attack_2__000.png" type="Texture" id=3]
 
 [node name="StartMenu" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 1 )
-first_world = "res://Level1.tscn"
+next_world = ExtResource( 2 )
 
 [node name="CenterContainer" type="CenterContainer" parent="."]
 anchor_left = 0.5
@@ -32,7 +33,7 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-texture = ExtResource( 2 )
+texture = ExtResource( 3 )
 stretch_mode = 5
 
 [node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer/VBoxContainer"]
