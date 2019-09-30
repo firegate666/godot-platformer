@@ -12,12 +12,12 @@ _global_script_classes=[ {
 "base": "Node2D",
 "class": "LevelManager",
 "language": "GDScript",
-"path": "res://LevelManager.gd"
+"path": "res://Scripts/Game/LevelManager.gd"
 }, {
 "base": "Node",
 "class": "PlayerModel",
 "language": "GDScript",
-"path": "res://PlayerModel.gd"
+"path": "res://Scripts/Autoload/PlayerModel.gd"
 } ]
 _global_script_class_icons={
 "LevelManager": "",
@@ -34,10 +34,10 @@ config/icon="res://icon.png"
 
 [autoload]
 
-SignalBus="*res://SignalBus.gd"
-PlayerModel="*res://PlayerModel.gd"
-SceneLoader="*res://SceneLoader.gd"
-LocalizationHandler="*res://LocalizationHandler.gd"
+SignalBus="*res://Scripts/Autoload/SignalBus.gd"
+PlayerModel="*res://Scripts/Autoload/PlayerModel.gd"
+SceneLoader="*res://Scripts/Autoload/SceneLoader.gd"
+LocalizationHandler="*res://Scripts/Autoload/LocalizationHandler.gd"
 
 [display]
 

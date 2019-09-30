@@ -1,9 +1,11 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://IngameUI.gd" type="Script" id=1]
-[ext_resource path="res://ResourcePanel.gd" type="Script" id=2]
+[ext_resource path="res://Scripts/UI/IngameUI.gd" type="Script" id=1]
+[ext_resource path="res://Scripts/UI/ResourcePanel.gd" type="Script" id=2]
 [ext_resource path="res://Assets/Fantasy Free Game Kit/Objects and Power Ups/PNG/Chest_01.png" type="Texture" id=3]
 [ext_resource path="res://Assets/Fantasy Free Game Kit/Objects and Power Ups/PNG/Heart.png" type="Texture" id=4]
+
+
 
 [node name="IngameUI" type="Control"]
 anchor_right = 1.0

@@ -1,6 +1,6 @@
 [gd_scene load_steps=32 format=2]
 
-[ext_resource path="res://Player.gd" type="Script" id=1]
+[ext_resource path="res://Scripts/Game/Player.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Fantasy Free Game Kit/Characters/Hero - Wizard/PNG/FW_Hero_1_Walking__000.png" type="Texture" id=2]
 [ext_resource path="res://Assets/Fantasy Free Game Kit/Characters/Hero - Wizard/PNG/FW_Hero_1_Jumping__009.png" type="Texture" id=3]
 [ext_resource path="res://Assets/Fantasy Free Game Kit/Characters/Hero - Wizard/PNG/FW_Hero_1_Jumping__006.png" type="Texture" id=4]
@@ -29,6 +29,7 @@
 [ext_resource path="res://Assets/Fantasy Free Game Kit/Characters/Hero - Wizard/PNG/FW_Hero_1_Walking__023.png" type="Texture" id=27]
 [ext_resource path="res://Assets/Fantasy Free Game Kit/Background and Tilesets/Forest_2048x1536/PNG/BG_1.png" type="Texture" id=28]
 [ext_resource path="res://Assets/Fantasy Free Game Kit/Background and Tilesets/Forest_2048x1536/PNG/BG_2_Clouds.png" type="Texture" id=29]
+
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
