@@ -18,10 +18,16 @@ _global_script_classes=[ {
 "class": "PlayerModel",
 "language": "GDScript",
 "path": "res://Scripts/Autoload/PlayerModel.gd"
+}, {
+"base": "Area2D",
+"class": "Spikes",
+"language": "GDScript",
+"path": "res://Scripts/Traps/SpikeTrap/Spikes.gd"
 } ]
 _global_script_class_icons={
 "LevelManager": "",
-"PlayerModel": ""
+"PlayerModel": "",
+"Spikes": ""
 }
 
 [application]

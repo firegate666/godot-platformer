@@ -25,8 +25,8 @@
 [ext_resource path="res://Assets/Fantasy Free Game Kit/Characters/Hero - Wizard/PNG/FW_Hero_1_Walking__021.png" type="Texture" id=23]
 [ext_resource path="res://Assets/Fantasy Free Game Kit/Characters/Hero - Wizard/PNG/FW_Hero_1_Walking__022.png" type="Texture" id=24]
 [ext_resource path="res://Assets/Fantasy Free Game Kit/Characters/Hero - Wizard/PNG/FW_Hero_1_Walking__023.png" type="Texture" id=25]
-[ext_resource path="res://Assets/Fantasy Free Game Kit/Characters/Hero - Wizard/PNG/FW_Hero_1_Jumping__009.png" type="Texture" id=26]
-[ext_resource path="res://Assets/Fantasy Free Game Kit/Characters/Hero - Wizard/PNG/FW_Hero_1_Jumping__006.png" type="Texture" id=27]
+[ext_resource path="res://Assets/Fantasy Free Game Kit/Characters/Hero - Wizard/PNG/FW_Hero_1_Jumping__006.png" type="Texture" id=26]
+[ext_resource path="res://Assets/Fantasy Free Game Kit/Characters/Hero - Wizard/PNG/FW_Hero_1_Jumping__009.png" type="Texture" id=27]
 [ext_resource path="res://Assets/Fantasy Free Game Kit/Background and Tilesets/Forest_2048x1536/PNG/BG_1.png" type="Texture" id=28]
 [ext_resource path="res://Assets/Fantasy Free Game Kit/Background and Tilesets/Forest_2048x1536/PNG/BG_2_Clouds.png" type="Texture" id=29]
 
@@ -44,12 +44,12 @@ animations = [ {
 }, {
 "frames": [ ExtResource( 26 ) ],
 "loop": true,
-"name": "Fall",
+"name": "Jump",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 27 ) ],
 "loop": true,
-"name": "Jump",
+"name": "Fall",
 "speed": 5.0
 } ]
 

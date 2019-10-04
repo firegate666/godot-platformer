@@ -1,0 +1,39 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Scripts/Traps/SpikeTrap/SpikeTrap.gd" type="Script" id=1]
+[ext_resource path="res://Scripts/Traps/SpikeTrap/Spikes.gd" type="Script" id=2]
+[ext_resource path="res://Assets/Fantasy Free Game Kit/Background and Tilesets/Objects/PNG/Spikes.png" type="Texture" id=3]
+[ext_resource path="res://Scripts/Traps/SpikeTrap/Detector.gd" type="Script" id=4]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 41.2717, 56.265 )
+
+[sub_resource type="CapsuleShape2D" id=2]
+radius = 195.52
+height = 155.798
+
+[node name="SpikeTrap" type="Node2D"]
+z_index = -10
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Spikes" type="Area2D" parent="."]
+script = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="Spikes"]
+texture = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spikes"]
+shape = SubResource( 1 )
+
+[node name="Detector" type="Area2D" parent="."]
+script = ExtResource( 4 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Detector"]
+position = Vector2( 0, -128 )
+shape = SubResource( 2 )
+[connection signal="body_entered" from="Spikes" to="Spikes" method="_on_SpikeTrap_body_entered"]
+[connection signal="body_entered" from="Detector" to="Detector" method="_on_Detector_body_entered"]
+[connection signal="body_exited" from="Detector" to="Detector" method="_on_Detector_body_exited"]
