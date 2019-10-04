@@ -3,13 +3,14 @@
 [ext_resource path="res://Scripts/Game/LevelManager.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Partials/TileMap.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/Partials/Coin.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Scenes/Partials/IngameUI.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/UI/IngameUI.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scripts/Game/DeathZone.gd" type="Script" id=5]
 [ext_resource path="res://Assets/Audio/Loop.wav" type="AudioStream" id=6]
 [ext_resource path="res://Scripts/Game/AudioStreamPlayer.gd" type="Script" id=7]
 [ext_resource path="res://Scenes/Partials/LevelWarp.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Scenes/Level/Level4.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Scenes/Partials/PlayerStart.tscn" type="PackedScene" id=10]
+
 
 [sub_resource type="LineShape2D" id=1]
 

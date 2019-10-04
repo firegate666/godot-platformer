@@ -4,7 +4,7 @@
 [ext_resource path="res://Scenes/Partials/LevelEnd.tscn" type="PackedScene" id=2]
 [ext_resource path="res://TileSet/ForestTileSet.tres" type="TileSet" id=3]
 [ext_resource path="res://Scenes/Partials/Coin.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Scenes/Partials/IngameUI.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/UI/IngameUI.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scripts/Game/DeathZone.gd" type="Script" id=6]
 [ext_resource path="res://Assets/Audio/Loop.wav" type="AudioStream" id=7]
 [ext_resource path="res://Scripts/Game/AudioStreamPlayer.gd" type="Script" id=8]
@@ -12,6 +12,7 @@
 [ext_resource path="res://Scenes/Level/Level2.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Scenes/Traps/SpikeTrap.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Scenes/Partials/PlayerStart.tscn" type="PackedScene" id=12]
+
 
 [sub_resource type="LineShape2D" id=1]
 
