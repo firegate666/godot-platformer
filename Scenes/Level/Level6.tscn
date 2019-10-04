@@ -1,0 +1,91 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://Scripts/Game/LevelManager.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/Partials/TileMap.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/UI/IngameUI.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scripts/Game/DeathZone.gd" type="Script" id=4]
+[ext_resource path="res://Assets/Audio/Loop.wav" type="AudioStream" id=5]
+[ext_resource path="res://Scripts/Game/AudioStreamPlayer.gd" type="Script" id=6]
+[ext_resource path="res://World.gd" type="Script" id=7]
+[ext_resource path="res://Scenes/Partials/Coin.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Scenes/Partials/Heart.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Scenes/Partials/PlayerStart.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Scenes/Partials/LevelWarp.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Scenes/Level/Level7.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Scenes/Traps/SpikeTrap.tscn" type="PackedScene" id=13]
+
+[sub_resource type="LineShape2D" id=1]
+
+[node name="Level1" type="Node2D"]
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_vertical_guides_": [ 1675.5 ]
+}
+
+[node name="TileMap" parent="." instance=ExtResource( 2 )]
+cell_size = Vector2( 256, 256 )
+tile_data = PoolIntArray( -131057, 30, 0, -131056, 30, 0, -131055, 30, 0, -131054, 30, 0, -131053, 30, 0, -131052, 30, 0, -131051, 30, 0, -65521, 30, 0, -65520, 30, 0, -65519, 30, 0, -65518, 30, 0, -65517, 30, 0, -65516, 30, 0, -65515, 30, 0, 15, 30, 0, 16, 30, 0, 17, 30, 0, 18, 30, 0, 19, 30, 0, 20, 30, 0, 21, 30, 0, 65554, 30, 0, 131090, 30, 0, 196621, 30, 0, 196622, 30, 0, 196623, 30, 0, 196624, 30, 0, 196625, 30, 0, 196626, 30, 0, 196627, 30, 0, 196628, 30, 0, 196629, 30, 0, 196630, 30, 0, 196632, 30, 0, 196633, 30, 0, 196634, 30, 0, 196635, 30, 0, 196636, 30, 0, 196637, 30, 0, 262157, 30, 0, 262169, 30, 0, 327693, 30, 0, 327705, 30, 0, 393229, 30, 0, 393241, 30, 0, 458765, 30, 0, 458766, 30, 0, 458767, 30, 0, 458768, 30, 0, 458769, 30, 0, 458770, 30, 0, 458771, 30, 0, 458772, 30, 0, 458773, 30, 0, 458774, 30, 0, 458775, 30, 0, 458776, 31, 0, 458777, 32, 0 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+editor/display_folded = true
+
+[node name="IngameUI" parent="CanvasLayer" instance=ExtResource( 3 )]
+
+[node name="DeathZone" type="Area2D" parent="."]
+editor/display_folded = true
+position = Vector2( 100, 2000 )
+scale = Vector2( 10000, 1 )
+script = ExtResource( 4 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DeathZone"]
+shape = SubResource( 1 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+autoplay = true
+script = ExtResource( 6 )
+
+[node name="World" type="Node2D" parent="."]
+script = ExtResource( 7 )
+
+[node name="Coin" parent="World" instance=ExtResource( 8 )]
+visible = false
+position = Vector2( 2560, 512 )
+
+[node name="Coin2" parent="World" instance=ExtResource( 8 )]
+visible = false
+position = Vector2( 2688, 512 )
+
+[node name="Coin3" parent="World" instance=ExtResource( 8 )]
+visible = false
+position = Vector2( 2432, 512 )
+
+[node name="Coin4" parent="World" instance=ExtResource( 8 )]
+visible = false
+position = Vector2( 2304, 512 )
+
+[node name="Heart" parent="World" instance=ExtResource( 9 )]
+visible = false
+position = Vector2( 1920, 768 )
+
+[node name="Heart2" parent="World" instance=ExtResource( 9 )]
+visible = false
+position = Vector2( 1792, 768 )
+
+[node name="Heart3" parent="World" instance=ExtResource( 9 )]
+visible = false
+position = Vector2( 2048, 768 )
+
+[node name="Heart4" parent="World" instance=ExtResource( 9 )]
+visible = false
+position = Vector2( 2176, 768 )
+
+[node name="PlayerStart" parent="World" instance=ExtResource( 10 )]
+position = Vector2( 3200, 256 )
+
+[node name="LevelWarp" parent="World" instance=ExtResource( 11 )]
+position = Vector2( 3072, 651.5 )
+next_world = ExtResource( 12 )
+
+[node name="SpikeTrap" parent="World" instance=ExtResource( 13 )]
+position = Vector2( 2816, 256 )

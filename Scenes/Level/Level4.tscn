@@ -11,7 +11,6 @@
 [ext_resource path="res://Scenes/Level/Level5.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Scenes/Partials/Coin.tscn" type="PackedScene" id=10]
 
-
 [sub_resource type="LineShape2D" id=1]
 
 [node name="Level1" type="Node2D"]

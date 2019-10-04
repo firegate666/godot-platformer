@@ -11,10 +11,9 @@
 [ext_resource path="res://Scenes/Partials/PlayerStart.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Scenes/Traps/SpikeTrap.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Scenes/Partials/LevelWarp.tscn" type="PackedScene" id=11]
-[ext_resource path="res://Scenes/EndMenu.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Scenes/Level/Level6.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Scenes/Partials/Teleport.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Scenes/Objects/Crate.tscn" type="PackedScene" id=14]
-
 
 [sub_resource type="LineShape2D" id=1]
 
