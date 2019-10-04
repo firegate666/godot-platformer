@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Assets/Fantasy Free Game Kit/Background and Tilesets/Objects/PNG/Trash_Can.png" type="Texture" id=1]
+
+[node name="TrashCan" type="StaticBody2D"]
+z_index = -10
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 0, -10.73 )
+texture = ExtResource( 1 )
+centered = false

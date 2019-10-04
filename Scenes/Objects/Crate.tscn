@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Assets/Fantasy Free Game Kit/Background and Tilesets/Objects/PNG/Crate.png" type="Texture" id=1]
+
+[node name="Crate" type="StaticBody2D"]
+z_index = -10
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 9.65, 39.72 )
+texture = ExtResource( 1 )
+centered = false
