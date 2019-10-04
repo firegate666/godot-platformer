@@ -177,4 +177,4 @@ position = Vector2( 1920, 5376 )
 teleport_target = NodePath("../Crate")
 
 [node name="Crate" parent="World" instance=ExtResource( 14 )]
-position = Vector2( 512, 5760 )
+position = Vector2( 763, 5760 )

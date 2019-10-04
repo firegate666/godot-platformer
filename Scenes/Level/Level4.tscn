@@ -54,14 +54,19 @@ position = Vector2( -640, 1152 )
 next_world = ExtResource( 9 )
 
 [node name="Coin" parent="World" instance=ExtResource( 10 )]
-position = Vector2( 2304, 2944 )
+position = Vector2( 2048, 2944 )
 
 [node name="Coin2" parent="World" instance=ExtResource( 10 )]
+position = Vector2( 1024, 512 )
 
 [node name="Coin3" parent="World" instance=ExtResource( 10 )]
+position = Vector2( 703, 512 )
 
 [node name="Coin4" parent="World" instance=ExtResource( 10 )]
+position = Vector2( 407, 512 )
 
 [node name="Coin5" parent="World" instance=ExtResource( 10 )]
+position = Vector2( 267.5, 5 )
 
 [node name="Coin6" parent="World" instance=ExtResource( 10 )]
+position = Vector2( 896, 5 )
