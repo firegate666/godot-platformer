@@ -8,7 +8,7 @@
 [ext_resource path="res://Scripts/Game/AudioStreamPlayer.gd" type="Script" id=6]
 [ext_resource path="res://Scenes/Partials/PlayerStart.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Scenes/Partials/LevelWarp.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Scenes/Helper/Level8.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Scenes/Level/Level8.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Scenes/Partials/Coin.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Scenes/Traps/SpikeTrap.tscn" type="PackedScene" id=11]
 
