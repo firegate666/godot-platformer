@@ -10,7 +10,10 @@ func _ready():
 	SignalBus.connect("request_change_scene", self, "goto_scene")
 
 func reload_scene():
-	goto_scene(current_path)
+	if (current_path == null):
+		get_tree().reload_current_scene()
+	else:
+		goto_scene(current_path)
 
 func goto_scene(packed_scene: PackedScene):
 	# This function will usually be called from a signal callback,
