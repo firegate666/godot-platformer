@@ -20,22 +20,22 @@ script = ExtResource( 1 )
 tile_data = PoolIntArray( 46, 22, 0, 50, 23, 0, 54, 24, 0, 589828, 14, 0, 589832, 12, 0, 589836, 13, 0, 851968, 2, 0, 851972, 15, 0, 851976, 16, 0, 851980, 18, 0, 851984, 12, 0, 851988, 13, 0, 1114112, 35, 0, 1114116, 37, 0, 1114120, 37, 0, 1114124, 37, 0, 1114128, 37, 0, 1114132, 26, 0, 1245212, 22, 0, 1245216, 23, 0, 1245220, 24, 0, 2490384, 0, 0, 2490388, 3, 0, 2490392, 3, 0, 2490396, 3, 0, 2490400, 19, 0, 2752524, 0, 0, 2752528, 15, 0, 2752532, 10, 0, 2752536, 10, 0, 2752540, 10, 0, 2752544, 18, 0, 2752548, 24, 0, 3014664, 0, 0, 3014668, 15, 0, 3014672, 37, 0, 3014676, 37, 0, 3014680, 37, 0, 3014684, 37, 0, 3014688, 38, 0, 3276804, 22, 0, 3276808, 15, 0, 3538952, 18, 0, 3538956, 6, 0, 3801096, 27, 0, 3801100, 18, 0, 3801104, 3, 0, 3801108, 3, 0, 3801112, 3, 0, 3801116, 3, 0, 3801120, 6, 0, 4128813, 22, 0, 4128817, 23, 0, 4128821, 24, 0 )
 
 [node name="Coin" parent="." instance=ExtResource( 3 )]
-position = Vector2( 46.5247, 307.38 )
+position = Vector2( -11.6966, 238.884 )
 
 [node name="Coin2" parent="." instance=ExtResource( 3 )]
-position = Vector2( 1073.96, 512.867 )
+position = Vector2( 1005.46, 437.522 )
 
 [node name="Coin3" parent="." instance=ExtResource( 3 )]
 position = Vector2( 1669.87, -107.02 )
 
 [node name="Coin4" parent="." instance=ExtResource( 3 )]
-position = Vector2( 1231.5, 1235.5 )
+position = Vector2( 1152.73, 1163.58 )
 
 [node name="Coin5" parent="." instance=ExtResource( 3 )]
-position = Vector2( 724.633, 1119.05 )
+position = Vector2( 680.111, 1036.86 )
 
 [node name="Coin6" parent="." instance=ExtResource( 3 )]
-position = Vector2( 190.366, 1495.78 )
+position = Vector2( 121.87, 1423.86 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -60,4 +60,4 @@ position = Vector2( 687.412, 1650.47 )
 next_world = ExtResource( 9 )
 
 [node name="PlayerStart" parent="." instance=ExtResource( 10 )]
-position = Vector2( 183.898, 232.456 )
+position = Vector2( 146.226, 163.96 )

@@ -27,19 +27,19 @@ format = 1
 tile_data = PoolIntArray( 851984, 7, 0, 851988, 8, 0, 851992, 4, 0, 1114124, 0, 0, 1114128, 15, 0, 1114132, 16, 0, 1114136, 33, 0, 1245220, 2, 0, 1245224, 19, 0, 1376264, 2, 0, 1376268, 15, 0, 1376272, 17, 0, 1376276, 16, 0, 1376280, 39, 0, 1507364, 21, 0, 1507368, 26, 0, 1638408, 9, 0, 1638412, 36, 0, 1638416, 36, 0, 1638419, 31, 0, 1638420, 31, 0, 1638424, 32, 0, 1769463, 22, 0, 1769467, 23, 0, 1769471, 24, 0, 1769508, 20, 0, 1769512, 11, 0, 2031652, 21, 0, 2031656, 11, 0, 2293792, 0, 0, 2293796, 15, 0, 2293800, 11, 0, 2555932, 2, 0, 2555936, 15, 0, 2555940, 17, 0, 2555944, 11, 0, 2752524, 22, 0, 2752528, 23, 0, 2752532, 24, 0 )
 
 [node name="Coin" parent="." instance=ExtResource( 4 )]
-position = Vector2( 959.889, 1128.8 )
+position = Vector2( 909.678, 1067.43 )
 
 [node name="Coin5" parent="." instance=ExtResource( 4 )]
-position = Vector2( 1273.36, 347.558 )
+position = Vector2( 1209.2, 288.978 )
 
 [node name="Coin6" parent="." instance=ExtResource( 4 )]
-position = Vector2( 1276.3, 191.933 )
+position = Vector2( 1206.56, 127.774 )
 
 [node name="Coin3" parent="." instance=ExtResource( 4 )]
-position = Vector2( 820.21, 303.721 )
+position = Vector2( 750.472, 239.562 )
 
 [node name="Coin4" parent="." instance=ExtResource( 4 )]
-position = Vector2( -110.444, 734.128 )
+position = Vector2( -185.761, 672.759 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -63,7 +63,7 @@ autoplay = true
 script = ExtResource( 10 )
 
 [node name="PlayerStart" parent="." instance=ExtResource( 11 )]
-position = Vector2( 313.249, 617.999 )
+position = Vector2( 276.986, 537.104 )
 
 [node name="Heart" parent="." instance=ExtResource( 12 )]
-position = Vector2( 1280.38, 504.901 )
+position = Vector2( 1185.54, 446.321 )

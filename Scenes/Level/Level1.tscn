@@ -27,13 +27,13 @@ format = 1
 tile_data = PoolIntArray( 655374, 7, 0, 655378, 8, 0, 655382, 3, 0, 655386, 3, 0, 655390, 6, 0, 917506, 0, 0, 917510, 3, 0, 917514, 3, 0, 917518, 15, 0, 917522, 17, 0, 917534, 18, 0, 917538, 19, 0, 1048618, 14, 0, 1048622, 3, 0, 1048626, 3, 0, 1048630, 6, 0, 1245178, 7, 0, 1245182, 8, 0, 1179650, 15, 0, 1179654, 10, 0, 1179658, 10, 0, 1179662, 10, 0, 1179666, 38, 0, 1179678, 35, 0, 1179682, 26, 0, 1310762, 20, 0, 1310766, 10, 0, 1310770, 10, 0, 1310774, 26, 0 )
 
 [node name="Coin" parent="." instance=ExtResource( 4 )]
-position = Vector2( 1140.23, 339.572 )
+position = Vector2( 1061.19, 246.9 )
 
 [node name="Coin2" parent="." instance=ExtResource( 4 )]
-position = Vector2( 1535.81, 417.039 )
+position = Vector2( 1389.54, 271.506 )
 
 [node name="Coin3" parent="." instance=ExtResource( 4 )]
-position = Vector2( 1678.58, 416.943 )
+position = Vector2( 1596.71, 269.456 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 editor/display_folded = true
@@ -60,7 +60,7 @@ gravity_point = true
 next_world = ExtResource( 10 )
 
 [node name="SpikeTrap" parent="." instance=ExtResource( 11 )]
-position = Vector2( 825.04, 262.736 )
+position = Vector2( 766.273, 194.289 )
 
 [node name="PlayerStart" parent="." instance=ExtResource( 12 )]
-position = Vector2( 233.183, 393.391 )
+position = Vector2( 186.152, 326.404 )

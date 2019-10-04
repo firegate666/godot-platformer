@@ -15,8 +15,10 @@ __meta__ = {
 
 [node name="Sprite" type="Sprite" parent="."]
 texture = ExtResource( 2 )
+centered = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 93.1486, 65.4558 )
 shape = SubResource( 1 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]

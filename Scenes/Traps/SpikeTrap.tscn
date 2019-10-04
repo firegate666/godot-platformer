@@ -15,24 +15,24 @@ height = 155.798
 [node name="SpikeTrap" type="Node2D"]
 z_index = -10
 script = ExtResource( 1 )
-__meta__ = {
-"_edit_group_": true
-}
 
 [node name="Spikes" type="Area2D" parent="."]
 script = ExtResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="Spikes"]
 texture = ExtResource( 3 )
+centered = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Spikes"]
+position = Vector2( 60.9418, 66.4819 )
 shape = SubResource( 1 )
 
 [node name="Detector" type="Area2D" parent="."]
+position = Vector2( 22.1606, 31.0249 )
 script = ExtResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Detector"]
-position = Vector2( 0, -128 )
+position = Vector2( 38.7811, -120.244 )
 shape = SubResource( 2 )
 [connection signal="body_entered" from="Spikes" to="Spikes" method="_on_SpikeTrap_body_entered"]
 [connection signal="body_entered" from="Detector" to="Detector" method="_on_Detector_body_entered"]
