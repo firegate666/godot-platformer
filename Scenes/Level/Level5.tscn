@@ -1,0 +1,180 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://Scripts/Game/LevelManager.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/Partials/TileMap.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/Partials/IngameUI.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scripts/Game/DeathZone.gd" type="Script" id=4]
+[ext_resource path="res://Assets/Audio/Loop.wav" type="AudioStream" id=5]
+[ext_resource path="res://Scripts/Game/AudioStreamPlayer.gd" type="Script" id=6]
+[ext_resource path="res://Scenes/Partials/Coin.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Scenes/Partials/Heart.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Scenes/Partials/PlayerStart.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Scenes/Traps/SpikeTrap.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Scenes/Partials/LevelWarp.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Scenes/EndMenu.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Scenes/Partials/Teleport.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Scenes/Objects/Crate.tscn" type="PackedScene" id=14]
+
+[sub_resource type="LineShape2D" id=1]
+
+[node name="Level1" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="TileMap" parent="." instance=ExtResource( 2 )]
+cell_size = Vector2( 256, 256 )
+tile_data = PoolIntArray( 2162692, 30, 0, 2162693, 30, 0, 2162694, 30, 0, 2162695, 30, 0, 2228224, 30, 0, 2228225, 30, 0, 2228226, 30, 0, 2228227, 30, 0, 2228228, 30, 0, 2228230, 30, 0, 2228231, 30, 0, 2228232, 30, 0, 2228233, 30, 0, 2228234, 30, 0, 2228235, 30, 0, 2228236, 30, 0, 2228237, 30, 0, 2228238, 30, 0, 2228239, 30, 0, 2228240, 30, 0, 2293760, 30, 0, 2293776, 30, 0, 2359296, 30, 0, 2359312, 30, 0, 2424832, 30, 0, 2424848, 30, 0, 2490368, 30, 0, 2490384, 30, 0, 2621439, 30, 0, 2555904, 30, 0, 2555920, 30, 0, 2686975, 30, 0, 2621440, 30, 0, 2621456, 30, 0, 2752511, 30, 0, 2686976, 30, 0, 2686992, 30, 0, 2818047, 30, 0, 2752512, 30, 0, 2752528, 30, 0, 2818048, 30, 0, 2818052, 30, 0, 2818053, 30, 0, 2818054, 30, 0, 2818055, 30, 0, 2818056, 30, 0, 2818057, 30, 0, 2818058, 30, 0, 2818059, 30, 0, 2818060, 30, 0, 2818062, 30, 0, 2818063, 30, 0, 2818064, 30, 0, 2883584, 30, 0, 2883600, 30, 0, 2949120, 30, 0, 2949135, 30, 0, 2949136, 30, 0, 3014656, 30, 0, 3014658, 30, 0, 3014659, 30, 0, 3014660, 30, 0, 3014661, 30, 0, 3014662, 30, 0, 3014663, 30, 0, 3014664, 30, 0, 3014665, 30, 0, 3014666, 30, 0, 3014667, 30, 0, 3014669, 30, 0, 3014671, 30, 0, 3014672, 30, 0, 3080192, 30, 0, 3080208, 30, 0, 3145728, 30, 0, 3145744, 30, 0, 3145745, 30, 0, 3145746, 30, 0, 3211264, 30, 0, 3211282, 30, 0, 3276800, 30, 0, 3276818, 30, 0, 3342336, 30, 0, 3342340, 30, 0, 3342341, 30, 0, 3342342, 30, 0, 3342343, 30, 0, 3342344, 30, 0, 3342345, 30, 0, 3342346, 30, 0, 3342347, 30, 0, 3342348, 30, 0, 3342349, 30, 0, 3342350, 30, 0, 3342351, 30, 0, 3342352, 30, 0, 3342353, 30, 0, 3342354, 30, 0, 3407873, 30, 0, 3407874, 30, 0, 3407875, 30, 0, 3407876, 30, 0 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+editor/display_folded = true
+
+[node name="IngameUI" parent="CanvasLayer" instance=ExtResource( 3 )]
+
+[node name="DeathZone" type="Area2D" parent="."]
+position = Vector2( 100, 2000 )
+scale = Vector2( 10000, 1 )
+script = ExtResource( 4 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DeathZone"]
+position = Vector2( 0.566, 11312 )
+shape = SubResource( 1 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+autoplay = true
+script = ExtResource( 6 )
+
+[node name="World" type="Node2D" parent="."]
+
+[node name="Coin2" parent="World" instance=ExtResource( 7 )]
+position = Vector2( 996, 5120 )
+
+[node name="Coin3" parent="World" instance=ExtResource( 7 )]
+position = Vector2( 228, 6144 )
+
+[node name="Coin4" parent="World" instance=ExtResource( 7 )]
+position = Vector2( 1252, 6272 )
+
+[node name="Coin5" parent="World" instance=ExtResource( 7 )]
+position = Vector2( 1764, 5760 )
+
+[node name="Coin6" parent="World" instance=ExtResource( 7 )]
+position = Vector2( 996, 4736 )
+
+[node name="Heart" parent="World" instance=ExtResource( 8 )]
+position = Vector2( 996, 4992 )
+
+[node name="Heart2" parent="World" instance=ExtResource( 8 )]
+position = Vector2( 996, 4864 )
+
+[node name="Heart3" parent="World" instance=ExtResource( 8 )]
+position = Vector2( 996, 5376 )
+
+[node name="Heart4" parent="World" instance=ExtResource( 8 )]
+position = Vector2( 868, 5376 )
+
+[node name="Heart5" parent="World" instance=ExtResource( 8 )]
+position = Vector2( 740, 5248 )
+
+[node name="Heart6" parent="World" instance=ExtResource( 8 )]
+position = Vector2( 996, 5248 )
+
+[node name="Heart7" parent="World" instance=ExtResource( 8 )]
+position = Vector2( 740, 5376 )
+
+[node name="Heart8" parent="World" instance=ExtResource( 8 )]
+position = Vector2( 996, 5376 )
+
+[node name="Heart9" parent="World" instance=ExtResource( 8 )]
+position = Vector2( 868, 5248 )
+
+[node name="Heart10" parent="World" instance=ExtResource( 8 )]
+position = Vector2( 868, 5120 )
+
+[node name="Heart11" parent="World" instance=ExtResource( 8 )]
+position = Vector2( 868, 4992 )
+
+[node name="Heart12" parent="World" instance=ExtResource( 8 )]
+position = Vector2( 740, 5120 )
+
+[node name="Heart13" parent="World" instance=ExtResource( 8 )]
+position = Vector2( 612, 4992 )
+
+[node name="Heart14" parent="World" instance=ExtResource( 8 )]
+position = Vector2( 868, 5120 )
+
+[node name="Heart15" parent="World" instance=ExtResource( 8 )]
+position = Vector2( 768, 4992 )
+
+[node name="Heart16" parent="World" instance=ExtResource( 8 )]
+position = Vector2( 768, 4736 )
+
+[node name="Heart17" parent="World" instance=ExtResource( 8 )]
+position = Vector2( 640, 4736 )
+
+[node name="Heart18" parent="World" instance=ExtResource( 8 )]
+position = Vector2( 640, 4864 )
+
+[node name="Heart19" parent="World" instance=ExtResource( 8 )]
+position = Vector2( 896, 4736 )
+
+[node name="Heart20" parent="World" instance=ExtResource( 8 )]
+position = Vector2( 896, 4864 )
+
+[node name="Heart21" parent="World" instance=ExtResource( 8 )]
+position = Vector2( 768, 4864 )
+
+[node name="Heart22" parent="World" instance=ExtResource( 8 )]
+position = Vector2( 512, 5120 )
+
+[node name="Heart23" parent="World" instance=ExtResource( 8 )]
+position = Vector2( 640, 5120 )
+
+[node name="Heart24" parent="World" instance=ExtResource( 8 )]
+position = Vector2( 640, 5248 )
+
+[node name="Heart25" parent="World" instance=ExtResource( 8 )]
+position = Vector2( 640, 5248 )
+
+[node name="Heart26" parent="World" instance=ExtResource( 8 )]
+position = Vector2( 640, 5376 )
+
+[node name="Heart27" parent="World" instance=ExtResource( 8 )]
+position = Vector2( 512, 5376 )
+
+[node name="Heart28" parent="World" instance=ExtResource( 8 )]
+position = Vector2( 512, 5248 )
+
+[node name="Heart29" parent="World" instance=ExtResource( 8 )]
+position = Vector2( 512, 4992 )
+
+[node name="Heart30" parent="World" instance=ExtResource( 8 )]
+position = Vector2( 512, 4864 )
+
+[node name="Heart31" parent="World" instance=ExtResource( 8 )]
+position = Vector2( 512, 4736 )
+
+[node name="PlayerStart" parent="World" instance=ExtResource( 9 )]
+position = Vector2( 768, 5376 )
+
+[node name="SpikeTrap" parent="World" instance=ExtResource( 10 )]
+position = Vector2( 1408, 5376 )
+
+[node name="SpikeTrap2" parent="World" instance=ExtResource( 10 )]
+position = Vector2( 768, 6400 )
+
+[node name="SpikeTrap3" parent="World" instance=ExtResource( 10 )]
+position = Vector2( 256, 6528 )
+
+[node name="SpikeTrap4" parent="World" instance=ExtResource( 10 )]
+position = Vector2( 1664, 6400 )
+
+[node name="LevelWarp" parent="World" instance=ExtResource( 11 )]
+position = Vector2( 2048, 6341 )
+next_world = ExtResource( 12 )
+
+[node name="Teleport1" parent="World" instance=ExtResource( 13 )]
+position = Vector2( 1920, 5376 )
+teleport_target = NodePath("../Crate")
+
+[node name="Crate" parent="World" instance=ExtResource( 14 )]
+position = Vector2( 512, 5760 )
