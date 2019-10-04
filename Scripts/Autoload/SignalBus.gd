@@ -1,6 +1,7 @@
 extends Node
 
 signal player_coin_collected(value)
+signal player_heart_collected(value)
 
 signal player_died
 signal player_model_updated(player_model)
