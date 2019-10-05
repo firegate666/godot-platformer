@@ -9,7 +9,7 @@
 [ext_resource path="res://World.gd" type="Script" id=7]
 [ext_resource path="res://Scenes/Partials/PlayerStart.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Scenes/Partials/LevelWarp.tscn" type="PackedScene" id=9]
-[ext_resource path="res://Scenes/EndMenu.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Scenes/Helper/Level 9.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Scenes/Partials/Coin.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Scenes/Partials/Heart.tscn" type="PackedScene" id=12]
 
@@ -42,7 +42,6 @@ autoplay = true
 script = ExtResource( 6 )
 
 [node name="World" type="Node2D" parent="."]
-editor/display_folded = true
 script = ExtResource( 7 )
 
 [node name="PlayerStart" parent="World" instance=ExtResource( 8 )]
