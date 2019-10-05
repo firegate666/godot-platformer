@@ -13,7 +13,6 @@
 [ext_resource path="res://Scenes/Traps/SpikeTrap.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Scenes/Partials/PlayerStart.tscn" type="PackedScene" id=12]
 
-
 [sub_resource type="LineShape2D" id=1]
 
 [node name="Level1" type="Node2D"]
