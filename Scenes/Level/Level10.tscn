@@ -14,7 +14,7 @@
 [ext_resource path="res://Scenes/Partials/Coin.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Scenes/Partials/PlayerStart.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Scenes/Partials/LevelWarp.tscn" type="PackedScene" id=14]
-[ext_resource path="res://Scenes/EndMenu.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Scenes/Level/Level11.tscn" type="PackedScene" id=15]
 
 [sub_resource type="LineShape2D" id=1]
 
