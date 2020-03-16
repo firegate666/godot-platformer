@@ -9,7 +9,7 @@
 [ext_resource path="res://World.gd" type="Script" id=7]
 [ext_resource path="res://Scenes/Partials/PlayerStart.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Scenes/Partials/LevelWarp.tscn" type="PackedScene" id=9]
-[ext_resource path="res://Scenes/Helper/Level 9.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Scenes/Level/Level 9.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Scenes/Partials/Coin.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Scenes/Partials/Heart.tscn" type="PackedScene" id=12]
 
