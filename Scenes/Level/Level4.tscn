@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Scripts/Game/LevelManager.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Partials/TileMap.tscn" type="PackedScene" id=2]
@@ -6,6 +6,12 @@
 [ext_resource path="res://Scripts/Game/DeathZone.gd" type="Script" id=4]
 [ext_resource path="res://Assets/Audio/6067847929266176.wav" type="AudioStream" id=5]
 [ext_resource path="res://Scripts/Game/AudioStreamPlayer.gd" type="Script" id=6]
+[ext_resource path="res://Scenes/Partials/Heart.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Scenes/Partials/Teleport.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Scenes/Partials/Coin.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Scenes/Partials/LevelWarp.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Scenes/Level/Level5.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Scenes/Partials/PlayerStart.tscn" type="PackedScene" id=12]
 
 [sub_resource type="LineShape2D" id=1]
 
@@ -17,6 +23,7 @@ __meta__ = {
 
 [node name="TileMap" parent="." instance=ExtResource( 2 )]
 cell_size = Vector2( 256, 256 )
+tile_data = PoolIntArray( 4522183, 3, 0, 4522184, 3, 0, 4522185, 3, 0, 4522186, 3, 0, 4587687, 4, 0, 4587688, 4, 0, 4587689, 4, 0, 4587690, 4, 0, 4587691, 4, 0, 4587692, 6, 0, 4587719, 3, 0, 4587722, 3, 0, 4587723, 3, 0, 4653227, 4, 0, 4653228, 4, 0, 4653229, 6, 0, 4653255, 3, 0, 4653259, 3, 0, 4718764, 4, 0, 4718765, 4, 0, 4718766, 6, 0, 4718767, 0, 0, 4718768, 6, 0, 4718790, 3, 0, 4718791, 3, 0, 4718795, 3, 0, 4784301, 4, 0, 4784302, 4, 0, 4784303, 3, 0, 4784304, 3, 0, 4784330, 3, 0, 4784331, 3, 0, 4849838, 4, 0, 4849839, 4, 0, 4849840, 3, 0, 4849865, 3, 0, 4915375, 4, 0, 4915376, 4, 0, 4915377, 6, 0, 4915401, 3, 0, 4980911, 3, 0, 4980912, 4, 0, 4980913, 4, 0, 4980936, 3, 0, 4980937, 3, 0, 5046447, 3, 0, 5046448, 3, 0, 5046449, 4, 0, 5046471, 3, 0, 5046472, 3, 0, 5111983, 3, 0, 5111984, 3, 0, 5111985, 4, 0, 5112006, 3, 0, 5112007, 3, 0, 5177519, 3, 0, 5177520, 3, 0, 5177521, 4, 0, 5177522, 3, 0, 5177523, 3, 0, 5177524, 3, 0, 5177525, 3, 0, 5177541, 3, 0, 5177542, 3, 0, 5243064, 3, 0, 5243076, 3, 0, 5243077, 3, 0, 5308599, 3, 0, 5308600, 3, 0, 5308601, 3, 0, 5308610, 3, 0, 5308611, 3, 0, 5374134, 3, 0, 5374135, 3, 0, 5374136, 3, 0, 5374137, 3, 0, 5374138, 3, 0, 5374145, 3, 0, 5374146, 3, 0, 5439669, 3, 0, 5439670, 3, 0, 5439671, 3, 0, 5439672, 3, 0, 5439673, 3, 0, 5439674, 3, 0, 5439675, 3, 0, 5439680, 3, 0, 5439681, 3, 0, 5505176, 3, 0, 5505177, 3, 0, 5505181, 3, 0, 5505182, 3, 0, 5505183, 3, 0, 5505214, 3, 0, 5505215, 3, 0, 5570714, 3, 0, 5570715, 3, 0, 5570716, 3, 0, 5570717, 3, 0, 5570719, 3, 0, 5570720, 3, 0, 5570721, 3, 0, 5570722, 3, 0, 5570723, 3, 0, 5570724, 3, 0, 5570749, 3, 0, 5570750, 3, 0, 5636261, 3, 0, 5636262, 3, 0, 5636263, 3, 0, 5636264, 3, 0, 5636265, 3, 0, 5636266, 3, 0, 5636267, 3, 0, 5636285, 3, 0, 5701804, 3, 0, 5701805, 3, 0, 5701806, 3, 0, 5701807, 3, 0, 5701808, 3, 0, 5701809, 3, 0, 5701810, 3, 0, 5767347, 3, 0, 5767348, 3, 0, 5767349, 3, 0, 5767350, 3, 0, 5767351, 3, 0, 5767352, 3, 0, 5767363, 3, 0, 5767364, 3, 0, 5767365, 3, 0, 5767366, 3, 0, 5767367, 3, 0, 5767368, 3, 0, 5767369, 3, 0, 5767370, 3, 0, 5767371, 3, 0, 5767372, 3, 0, 5767373, 3, 0, 5767374, 3, 0, 5832889, 3, 0, 5832890, 3, 0, 5832891, 3, 0, 5832892, 3, 0, 5832893, 3, 0, 5832894, 3, 0, 5832895, 3, 0, 5832896, 3, 0, 5832897, 3, 0, 5832898, 3, 0 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 editor/display_folded = true
@@ -40,3 +47,39 @@ autoplay = true
 script = ExtResource( 6 )
 
 [node name="World" type="Node2D" parent="."]
+
+[node name="Heart" parent="World" instance=ExtResource( 7 )]
+position = Vector2( 23261.1, 10368 )
+
+[node name="Teleport" parent="World" instance=ExtResource( 8 )]
+position = Vector2( 23168, 10496 )
+teleport_target = NodePath("../LevelWarp")
+
+[node name="Teleport2" parent="World" instance=ExtResource( 8 )]
+position = Vector2( 23936, 10496 )
+teleport_target = NodePath("../LevelWarp")
+
+[node name="Heart2" parent="World" instance=ExtResource( 7 )]
+position = Vector2( 23773.1, 10368 )
+
+[node name="Coin" parent="World" instance=ExtResource( 9 )]
+position = Vector2( 23424, 10240 )
+
+[node name="Coin2" parent="World" instance=ExtResource( 9 )]
+position = Vector2( 23680, 10240 )
+
+[node name="LevelWarp" parent="World" instance=ExtResource( 10 )]
+position = Vector2( 23552, 10112 )
+next_world = ExtResource( 11 )
+
+[node name="PlayerStart" parent="World" instance=ExtResource( 12 )]
+position = Vector2( 21632, 8832 )
+
+[node name="Coin3" parent="World" instance=ExtResource( 9 )]
+position = Vector2( 25856, 9216 )
+
+[node name="Coin4" parent="World" instance=ExtResource( 9 )]
+position = Vector2( 25856, 9216 )
+
+[node name="Coin5" parent="World" instance=ExtResource( 9 )]
+position = Vector2( 25856, 9216 )
