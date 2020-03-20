@@ -1,0 +1,104 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://Scripts/Game/LevelManager.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/Partials/LevelEnd.tscn" type="PackedScene" id=2]
+[ext_resource path="res://TileSet/ForestTileSet.tres" type="TileSet" id=3]
+[ext_resource path="res://Scripts/Tools/TileMap.gd" type="Script" id=4]
+[ext_resource path="res://Scenes/UI/IngameUI.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scripts/Game/DeathZone.gd" type="Script" id=6]
+[ext_resource path="res://Assets/Audio/Loop.wav" type="AudioStream" id=7]
+[ext_resource path="res://Scripts/Game/AudioStreamPlayer.gd" type="Script" id=8]
+[ext_resource path="res://Scenes/Partials/LevelWarp.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Scenes/EndMenu.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Scenes/Partials/PlayerStart.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Scenes/Partials/Coin.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Scenes/Partials/Heart.tscn" type="PackedScene" id=13]
+
+[sub_resource type="LineShape2D" id=1]
+
+[node name="Level1" type="Node2D"]
+position = Vector2( 293.627, -38.1334 )
+script = ExtResource( 1 )
+
+[node name="LevelEnd" parent="." instance=ExtResource( 2 )]
+
+[node name="TileMap" type="TileMap" parent="."]
+scale = Vector2( 0.5, 0.5 )
+tile_set = ExtResource( 3 )
+format = 1
+tile_data = PoolIntArray( -13, 3, 0, 65523, 3, 0, 65526, 3, 0, 65527, 3, 0, 65528, 3, 0, 65529, 3, 0, 65530, 3, 0, 65531, 3, 0, 65532, 3, 0, 65533, 3, 0, 65534, 3, 0, 65535, 3, 0, 0, 3, 0, 1, 3, 0, 2, 3, 0, 3, 3, 0, 4, 3, 0, 5, 3, 0, 6, 3, 0, 7, 3, 0, 8, 3, 0, 9, 3, 0, 10, 3, 0, 11, 3, 0, 12, 3, 0, 13, 3, 0, 14, 3, 0, 15, 3, 0, 16, 3, 0, 17, 3, 0, 18, 3, 0, 19, 3, 0, 20, 3, 0, 21, 3, 0, 22, 3, 0, 23, 3, 0, 24, 3, 0, 25, 3, 0, 26, 3, 0, 27, 3, 0, 28, 3, 0, 29, 3, 0, 30, 3, 0, 31, 3, 0, 32, 3, 0, 33, 3, 0, 34, 3, 0, 35, 3, 0, 36, 3, 0, 37, 3, 0, 38, 3, 0, 131058, 3, 0, 65575, 3, 0, 65576, 3, 0, 65577, 3, 0, 65578, 3, 0, 65579, 3, 0, 65580, 3, 0, 65581, 3, 0, 65582, 3, 0, 65583, 3, 0, 65584, 3, 0, 65585, 3, 0, 65586, 3, 0, 196594, 3, 0, 131123, 3, 0, 131124, 3, 0, 131125, 3, 0, 131126, 3, 0, 262129, 3, 0, 262130, 3, 0, 196662, 3, 0, 327665, 3, 0, 262198, 3, 0, 262199, 3, 0, 393201, 3, 0, 393210, 0, 0, 393214, 6, 0, 327735, 3, 0, 458737, 3, 0, 393271, 3, 0, 524272, 3, 0, 524273, 3, 0, 458767, 3, 0, 458808, 3, 0, 589808, 3, 0, 524317, 3, 0, 524344, 3, 0, 655344, 3, 0, 655354, 35, 0, 655358, 38, 0, 589880, 3, 0, 589881, 3, 0, 720880, 3, 0, 655417, 3, 0, 786416, 3, 0, 720953, 3, 0, 851951, 3, 0, 786489, 3, 0, 917487, 3, 0, 852025, 3, 0, 983023, 3, 0, 917513, 9, 0, 917561, 3, 0, 1048559, 3, 0, 983076, 3, 0, 983097, 3, 0, 1114095, 3, 0, 1048633, 3, 0, 1114169, 3, 0, 1179706, 3, 0, 1245242, 3, 0, 1310778, 3, 0, 1376257, 9, 0, 1376271, 9, 0, 1376285, 3, 0, 1376298, 3, 0, 1376315, 3, 0, 1441851, 3, 0, 1507387, 3, 0, 1638383, 3, 0, 1572923, 3, 0, 1703935, 3, 0, 1638400, 3, 0, 1638459, 3, 0, 1769459, 3, 0, 1769468, 3, 0, 1769469, 3, 0, 1769470, 3, 0, 1769471, 3, 0, 1703936, 3, 0, 1703995, 3, 0, 1834991, 3, 0, 1769472, 3, 0, 1769531, 3, 0, 1900527, 3, 0, 1835008, 3, 0, 1835043, 3, 0, 1835067, 3, 0, 1966063, 3, 0, 1900544, 3, 0, 1900554, 9, 0, 1900562, 0, 0, 1900566, 6, 0, 1900603, 3, 0, 2031599, 3, 0, 1966080, 3, 0, 1966081, 3, 0, 1966088, 3, 0, 1966139, 3, 0, 2097135, 3, 0, 2031617, 3, 0, 2031618, 3, 0, 2031619, 3, 0, 2031620, 3, 0, 2031621, 3, 0, 2031622, 3, 0, 2031623, 3, 0, 2031674, 3, 0, 2031675, 3, 0, 2162671, 3, 0, 2097210, 3, 0, 2228207, 3, 0, 2162706, 35, 0, 2162710, 38, 0, 2162719, 3, 0, 2162720, 3, 0, 2162721, 3, 0, 2162722, 3, 0, 2162746, 3, 0, 2293743, 3, 0, 2228253, 3, 0, 2228254, 3, 0, 2228255, 3, 0, 2228259, 3, 0, 2228282, 3, 0, 2359279, 3, 0, 2293786, 3, 0, 2293787, 3, 0, 2293788, 3, 0, 2293795, 3, 0, 2293818, 3, 0, 2424816, 3, 0, 2359319, 3, 0, 2359320, 3, 0, 2359321, 3, 0, 2359322, 3, 0, 2359332, 3, 0, 2359353, 3, 0, 2490352, 3, 0, 2424854, 3, 0, 2424855, 3, 0, 2424868, 3, 0, 2424889, 3, 0, 2555888, 3, 0, 2555889, 3, 0, 2490388, 3, 0, 2490389, 3, 0, 2490404, 3, 0, 2490425, 3, 0, 2621425, 3, 0, 2621426, 3, 0, 2555922, 3, 0, 2555923, 3, 0, 2555941, 3, 0, 2555960, 3, 0, 2686963, 3, 0, 2686964, 3, 0, 2621457, 3, 0, 2621477, 3, 0, 2621495, 3, 0, 2752501, 3, 0, 2752502, 3, 0, 2686991, 3, 0, 2686992, 3, 0, 2687013, 3, 0, 2687030, 3, 0, 2818039, 3, 0, 2752525, 3, 0, 2752526, 3, 0, 2752550, 3, 0, 2752565, 3, 0, 2883576, 3, 0, 2883577, 3, 0, 2818060, 3, 0, 2818062, 3, 0, 2818086, 3, 0, 2818101, 3, 0, 2949114, 3, 0, 2949115, 3, 0, 2883597, 3, 0, 2883598, 3, 0, 2883623, 3, 0, 2883636, 3, 0, 2949133, 3, 0, 2949134, 3, 0, 2949159, 3, 0, 2949171, 3, 0, 3080187, 3, 0, 3080188, 3, 0, 3080189, 3, 0, 3014670, 3, 0, 3014696, 3, 0, 3014706, 3, 0, 3145725, 3, 0, 3080232, 3, 0, 3080242, 3, 0, 3211262, 3, 0, 3145768, 3, 0, 3145776, 3, 0, 3145777, 3, 0, 3276798, 3, 0, 3276799, 3, 0, 3211280, 3, 0, 3211305, 3, 0, 3211311, 3, 0, 3276816, 3, 0, 3276817, 3, 0, 3276818, 3, 0, 3276841, 3, 0, 3276846, 3, 0, 3342352, 3, 0, 3342353, 3, 0, 3342377, 3, 0, 3342378, 3, 0, 3342379, 3, 0, 3342380, 3, 0, 3342381, 3, 0, 3342382, 3, 0, 3473407, 3, 0, 3407888, 3, 0, 3407889, 3, 0, 3538943, 3, 0, 3473424, 3, 0, 3473425, 3, 0, 3604479, 3, 0, 3538959, 3, 0, 3538961, 3, 0, 3670015, 3, 0, 3604492, 3, 0, 3604493, 3, 0, 3604494, 3, 0, 3604496, 3, 0, 3735550, 3, 0, 3735551, 3, 0, 3670031, 3, 0, 3735552, 3, 0, 3735553, 3, 0, 3735554, 3, 0, 3735555, 3, 0, 3735559, 3, 0, 3735560, 3, 0 )
+script = ExtResource( 4 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+editor/display_folded = true
+
+[node name="IngameUI" parent="CanvasLayer" instance=ExtResource( 5 )]
+
+[node name="DeathZone" type="Area2D" parent="."]
+editor/display_folded = true
+position = Vector2( 100, 2000 )
+scale = Vector2( 10000, 1 )
+script = ExtResource( 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DeathZone"]
+shape = SubResource( 1 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 7 )
+autoplay = true
+script = ExtResource( 8 )
+
+[node name="LevelWarp" parent="." instance=ExtResource( 9 )]
+position = Vector2( 105.904, 683.436 )
+gravity_point = true
+next_world = ExtResource( 10 )
+
+[node name="PlayerStart" parent="." instance=ExtResource( 11 )]
+position = Vector2( 316.02, 353.745 )
+scale = Vector2( 0.794946, 0.75145 )
+
+[node name="Coin" parent="." instance=ExtResource( 12 )]
+position = Vector2( 365.13, 831.422 )
+scale = Vector2( 0.794946, 0.75145 )
+
+[node name="Coin2" parent="." instance=ExtResource( 12 )]
+position = Vector2( -536.399, 634.294 )
+
+[node name="Heart" parent="." instance=ExtResource( 13 )]
+position = Vector2( 104.241, 1496.11 )
+
+[node name="Heart2" parent="." instance=ExtResource( 13 )]
+position = Vector2( 27.9745, 1503.74 )
+
+[node name="Heart3" parent="." instance=ExtResource( 13 )]
+position = Vector2( 138.561, 1564.75 )
+
+[node name="Heart4" parent="." instance=ExtResource( 13 )]
+position = Vector2( 100.428, 1553.31 )
+
+[node name="Heart5" parent="." instance=ExtResource( 13 )]
+position = Vector2( 214.828, 1545.68 )
+
+[node name="Heart6" parent="." instance=ExtResource( 13 )]
+position = Vector2( 108.055, 1553.31 )
+
+[node name="Heart7" parent="." instance=ExtResource( 13 )]
+position = Vector2( 119.495, 1526.62 )
+
+[node name="Heart8" parent="." instance=ExtResource( 13 )]
+position = Vector2( 161.441, 1538.06 )
+
+[node name="Coin3" parent="." instance=ExtResource( 12 )]
+position = Vector2( 1385.52, 1503.73 )
+
+[node name="Coin4" parent="." instance=ExtResource( 12 )]
+position = Vector2( 1427.47, 1416.03 )
+
+[node name="Coin5" parent="." instance=ExtResource( 12 )]
+position = Vector2( 1423.66, 1431.28 )
+
+[node name="Coin6" parent="." instance=ExtResource( 12 )]
+position = Vector2( 1496.11, 1423.66 )
+
+[node name="Coin7" parent="." instance=ExtResource( 12 )]
+position = Vector2( 1408.4, 1366.46 )
