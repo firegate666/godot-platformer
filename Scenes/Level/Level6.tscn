@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://Scripts/Game/LevelManager.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Partials/TileMap.tscn" type="PackedScene" id=2]
@@ -7,12 +7,14 @@
 [ext_resource path="res://Assets/Audio/Loop.wav" type="AudioStream" id=5]
 [ext_resource path="res://Scripts/Game/AudioStreamPlayer.gd" type="Script" id=6]
 [ext_resource path="res://World.gd" type="Script" id=7]
-[ext_resource path="res://Scenes/Partials/Coin.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Scenes/Partials/Heart.tscn" type="PackedScene" id=9]
-[ext_resource path="res://Scenes/Partials/PlayerStart.tscn" type="PackedScene" id=10]
-[ext_resource path="res://Scenes/Partials/LevelWarp.tscn" type="PackedScene" id=11]
-[ext_resource path="res://Scenes/Level/Level7.tscn" type="PackedScene" id=12]
-[ext_resource path="res://Scenes/Traps/SpikeTrap.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Scenes/Objects/Barrel.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Scenes/Partials/Coin.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Scenes/Partials/Heart.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Scenes/Partials/Teleport.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Scenes/Partials/PlayerStart.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Scenes/Partials/LevelWarp.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Scenes/Level/Level7.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Scenes/Traps/SpikeTrap.tscn" type="PackedScene" id=15]
 
 [sub_resource type="LineShape2D" id=1]
 
@@ -48,44 +50,82 @@ script = ExtResource( 6 )
 [node name="World" type="Node2D" parent="."]
 script = ExtResource( 7 )
 
-[node name="Coin" parent="World" instance=ExtResource( 8 )]
-visible = false
+[node name="Barrel" parent="World" instance=ExtResource( 8 )]
+position = Vector2( 2432, 768 )
+
+[node name="Coin" parent="World" instance=ExtResource( 9 )]
 position = Vector2( 2560, 512 )
 
-[node name="Coin2" parent="World" instance=ExtResource( 8 )]
-visible = false
+[node name="Coin2" parent="World" instance=ExtResource( 9 )]
 position = Vector2( 2688, 512 )
 
-[node name="Coin3" parent="World" instance=ExtResource( 8 )]
-visible = false
+[node name="Coin3" parent="World" instance=ExtResource( 9 )]
 position = Vector2( 2432, 512 )
 
-[node name="Coin4" parent="World" instance=ExtResource( 8 )]
-visible = false
+[node name="Coin4" parent="World" instance=ExtResource( 9 )]
 position = Vector2( 2304, 512 )
 
-[node name="Heart" parent="World" instance=ExtResource( 9 )]
-visible = false
+[node name="Heart" parent="World" instance=ExtResource( 10 )]
 position = Vector2( 1920, 768 )
 
-[node name="Heart2" parent="World" instance=ExtResource( 9 )]
-visible = false
+[node name="Heart2" parent="World" instance=ExtResource( 10 )]
 position = Vector2( 1792, 768 )
 
-[node name="Heart3" parent="World" instance=ExtResource( 9 )]
-visible = false
+[node name="Heart3" parent="World" instance=ExtResource( 10 )]
 position = Vector2( 2048, 768 )
 
-[node name="Heart4" parent="World" instance=ExtResource( 9 )]
-visible = false
+[node name="Heart4" parent="World" instance=ExtResource( 10 )]
 position = Vector2( 2176, 768 )
 
-[node name="PlayerStart" parent="World" instance=ExtResource( 10 )]
+[node name="Teleport" parent="World" instance=ExtResource( 11 )]
+position = Vector2( 3712, 256 )
+teleport_target = NodePath("../Barrel")
+
+[node name="PlayerStart" parent="World" instance=ExtResource( 12 )]
 position = Vector2( 3200, 256 )
 
-[node name="LevelWarp" parent="World" instance=ExtResource( 11 )]
+[node name="LevelWarp" parent="World" instance=ExtResource( 13 )]
 position = Vector2( 3072, 651.5 )
-next_world = ExtResource( 12 )
+next_world = ExtResource( 14 )
 
-[node name="SpikeTrap" parent="World" instance=ExtResource( 13 )]
-position = Vector2( 2816, 256 )
+[node name="SpikeTrap" parent="World" instance=ExtResource( 15 )]
+position = Vector2( 2827.5, 256 )
+
+[node name="Coin5" parent="World" instance=ExtResource( 9 )]
+position = Vector2( 2176, 512 )
+
+[node name="Coin6" parent="World" instance=ExtResource( 9 )]
+position = Vector2( 2048, 512 )
+
+[node name="Coin7" parent="World" instance=ExtResource( 9 )]
+position = Vector2( 1920, 512 )
+
+[node name="Coin8" parent="World" instance=ExtResource( 9 )]
+position = Vector2( 1792, 512 )
+
+[node name="Coin9" parent="World" instance=ExtResource( 9 )]
+position = Vector2( 2816, 512 )
+
+[node name="Coin10" parent="World" instance=ExtResource( 9 )]
+position = Vector2( 3072, 512 )
+
+[node name="Heart5" parent="World" instance=ExtResource( 10 )]
+position = Vector2( 2560, 768 )
+
+[node name="Heart6" parent="World" instance=ExtResource( 10 )]
+position = Vector2( 2304, 768 )
+
+[node name="Heart7" parent="World" instance=ExtResource( 10 )]
+position = Vector2( 2688, 768 )
+
+[node name="Heart8" parent="World" instance=ExtResource( 10 )]
+position = Vector2( 2432, 768 )
+
+[node name="Heart9" parent="World" instance=ExtResource( 10 )]
+position = Vector2( 2816, 768 )
+
+[node name="Heart10" parent="World" instance=ExtResource( 10 )]
+position = Vector2( 2944, 768 )
+
+[node name="Heart11" parent="World" instance=ExtResource( 10 )]
+position = Vector2( 3072, 768 )
