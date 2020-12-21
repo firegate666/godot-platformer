@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://Scripts/Game/LevelManager.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Partials/LevelEnd.tscn" type="PackedScene" id=2]
@@ -9,12 +9,14 @@
 [ext_resource path="res://Assets/Audio/Loop.wav" type="AudioStream" id=7]
 [ext_resource path="res://Scripts/Game/AudioStreamPlayer.gd" type="Script" id=8]
 [ext_resource path="res://Scenes/Partials/LevelWarp.tscn" type="PackedScene" id=9]
-[ext_resource path="res://Scenes/EndMenu.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Scenes/Level/Level21.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Scenes/Partials/Coin.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Scenes/Partials/Heart.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Scenes/Objects/Crate.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Scenes/Partials/Teleport.tscn" type="PackedScene" id=14]
 [ext_resource path="res://Scenes/Partials/PlayerStart.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Scenes/Traps/SpikeTrap.tscn" type="PackedScene" id=16]
+[ext_resource path="res://Scenes/Objects/TrashCan.tscn" type="PackedScene" id=17]
 
 [sub_resource type="LineShape2D" id=1]
 
@@ -27,7 +29,7 @@ script = ExtResource( 1 )
 scale = Vector2( 0.5, 0.5 )
 tile_set = ExtResource( 3 )
 format = 1
-tile_data = PoolIntArray( 524308, 22, 0, 524312, 23, 0, 524316, 23, 0, 524320, 23, 0, 524324, 23, 0, 524328, 23, 0, 524332, 23, 0, 524336, 24, 0, 1310742, 23, 0, 1310743, 23, 0, 1310744, 23, 0, 1310745, 23, 0, 1310746, 23, 0, 1310747, 23, 0, 1310748, 23, 0, 1310749, 23, 0, 1310750, 23, 0, 1310751, 23, 0, 1376275, 23, 0, 1376276, 23, 0, 1376277, 23, 0, 1376288, 23, 0, 1376289, 23, 0, 1376290, 23, 0, 1376291, 23, 0, 1376292, 23, 0, 1376306, 23, 0, 1376307, 23, 0, 1376308, 23, 0, 1441828, 23, 0, 1441829, 23, 0, 1441830, 23, 0, 1441831, 23, 0, 1441832, 23, 0, 1441833, 23, 0, 1441834, 23, 0, 1441835, 23, 0, 1441836, 23, 0, 1441837, 23, 0, 1441838, 23, 0, 1441839, 23, 0, 1441840, 23, 0, 1441841, 23, 0, 1441842, 23, 0 )
+tile_data = PoolIntArray( -131013, 13, 0, 15, 10, 0, 19, 10, 0, 23, 10, 0, 27, 10, 0, 31, 10, 0, 35, 10, 0, 39, 10, 0, 43, 10, 0, 47, 10, 0, 51, 10, 0, 55, 10, 0, 131131, 10, 0, 131135, 1, 0, 131139, 1, 0, 131143, 1, 0, 131147, 1, 0, 131151, 1, 0, 131154, 1, 0, 131155, 1, 0, 131156, 1, 0, 262159, 10, 0, 327695, 10, 0, 393231, 10, 0, 393275, 10, 0, 393300, 1, 0, 655375, 10, 0, 655419, 10, 0, 655444, 1, 0, 917519, 10, 0, 917563, 10, 0, 917588, 1, 0, 1179663, 10, 0, 1179707, 10, 0, 1179711, 1, 0, 1179715, 1, 0, 1179719, 1, 0, 1179723, 1, 0, 1179727, 1, 0, 1179728, 1, 0, 1179732, 1, 0, 1441807, 10, 0, 1441811, 10, 0, 1441815, 10, 0, 1441819, 10, 0, 1441823, 10, 0, 1441827, 10, 0, 1441831, 10, 0, 1441835, 10, 0, 1441839, 10, 0, 1441843, 10, 0, 1441847, 10, 0, 1441851, 10, 0, 1703951, 16, 0, 1703995, 16, 0, 1966095, 16, 0, 1966139, 16, 0, 2228239, 16, 0, 2228283, 16, 0, 2490383, 16, 0, 2490427, 16, 0, 2752527, 16, 0, 2752531, 16, 0, 2752532, 16, 0, 2752533, 16, 0, 2752534, 16, 0, 2752535, 16, 0, 2752536, 16, 0, 2752537, 16, 0, 2752538, 16, 0, 2752542, 16, 0, 2752543, 16, 0, 2752544, 16, 0, 2752545, 16, 0, 2752549, 16, 0, 2752550, 16, 0, 2752551, 16, 0, 2752552, 16, 0, 2752553, 16, 0, 2752554, 16, 0, 2752555, 16, 0, 2752556, 16, 0, 2752557, 16, 0, 2752558, 16, 0, 2752559, 16, 0, 2752560, 16, 0, 2752564, 16, 0, 2752565, 16, 0, 2752566, 16, 0, 2752567, 16, 0, 2752571, 16, 0 )
 script = ExtResource( 4 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
@@ -49,7 +51,7 @@ autoplay = true
 script = ExtResource( 8 )
 
 [node name="LevelWarp" parent="." instance=ExtResource( 9 )]
-position = Vector2( 1743.96, 431.023 )
+position = Vector2( 3039.61, 484.437 )
 gravity_point = true
 next_world = ExtResource( 10 )
 
@@ -80,11 +82,17 @@ position = Vector2( 1187.24, 473.53 )
 [node name="Heart8" parent="." instance=ExtResource( 12 )]
 position = Vector2( 1137.78, 430.258 )
 
+[node name="Coin" parent="." instance=ExtResource( 11 )]
+position = Vector2( 852.505, 1224.54 )
+
+[node name="Heart11" parent="." instance=ExtResource( 12 )]
+position = Vector2( 1173.63, 476.664 )
+
 [node name="Crate" parent="." instance=ExtResource( 13 )]
-position = Vector2( 893.606, 501.347 )
+position = Vector2( 583.492, 940.1 )
 
 [node name="Teleport" parent="." instance=ExtResource( 14 )]
-position = Vector2( 952.332, 133.535 )
+position = Vector2( 1657.85, 570.609 )
 teleport_target = NodePath("../Crate")
 
 [node name="Heart9" parent="." instance=ExtResource( 12 )]
@@ -94,4 +102,21 @@ position = Vector2( 1177.97, 445.712 )
 position = Vector2( 1116.15, 442.621 )
 
 [node name="PlayerStart" parent="." instance=ExtResource( 15 )]
-position = Vector2( 686.518, 121.171 )
+position = Vector2( 652.103, 534.155 )
+
+[node name="Teleport2" parent="." instance=ExtResource( 14 )]
+position = Vector2( 2283.68, 430.803 )
+teleport_target = NodePath("../LevelWarp")
+
+[node name="SpikeTrap" parent="." instance=ExtResource( 16 )]
+position = Vector2( 1241.23, 1211.87 )
+
+[node name="Teleport3" parent="." instance=ExtResource( 14 )]
+position = Vector2( 1739.96, 1222.01 )
+teleport_target = NodePath("../TrashCan")
+
+[node name="Coin3" parent="." instance=ExtResource( 11 )]
+position = Vector2( 2139.29, 199.475 )
+
+[node name="TrashCan" parent="." instance=ExtResource( 17 )]
+position = Vector2( 2030.38, 447.545 )
