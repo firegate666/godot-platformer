@@ -11,7 +11,7 @@
 [ext_resource path="res://Scenes/Partials/Heart.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Scenes/Partials/Coin.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Scenes/Partials/LevelWarp.tscn" type="PackedScene" id=11]
-[ext_resource path="res://Scenes/EndMenu.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Scenes/Level/Level22.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Scenes/Partials/PlayerStart.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Scenes/Objects/Barrel.tscn" type="PackedScene" id=14]
 [ext_resource path="res://Scenes/Partials/Teleport.tscn" type="PackedScene" id=15]
@@ -30,6 +30,7 @@ tile_set = ExtResource( 3 )
 format = 1
 tile_data = PoolIntArray( -851944, 0, 0, -851940, 10, 0, -851936, 10, 0, -589804, 0, 0, -589792, 10, 0, -327664, 0, 0, -327648, 10, 0, -65524, 0, 0, -65504, 10, 0, 196616, 0, 0, 196640, 10, 0, 458784, 10, 0, 720928, 10, 0, 983040, 10, 0, 983044, 10, 0, 983048, 10, 0, 983052, 10, 0, 983056, 10, 0, 983060, 10, 0, 983068, 10, 0, 983072, 10, 0, 1245184, 10, 0, 1245216, 10, 0, 1507328, 10, 0, 1507360, 10, 0, 1769472, 10, 0, 1769504, 10, 0, 2031616, 10, 0, 2031620, 10, 0, 2031621, 10, 0, 2031622, 10, 0, 2031623, 10, 0, 2031627, 10, 0, 2031631, 10, 0, 2031635, 10, 0, 2031639, 10, 0, 2031643, 10, 0, 2031644, 10, 0, 2031648, 10, 0 )
 script = ExtResource( 4 )
+reset_map = false
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 editor/display_folded = true

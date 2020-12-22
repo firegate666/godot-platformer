@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Scripts/Game/LevelManager.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Partials/LevelEnd.tscn" type="PackedScene" id=2]
@@ -9,12 +9,10 @@
 [ext_resource path="res://Assets/Audio/Loop.wav" type="AudioStream" id=7]
 [ext_resource path="res://Scripts/Game/AudioStreamPlayer.gd" type="Script" id=8]
 [ext_resource path="res://Scenes/Partials/LevelWarp.tscn" type="PackedScene" id=9]
-[ext_resource path="res://Scenes/Level/Level18.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Scenes/Level/Level2.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Scenes/Partials/PlayerStart.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Scenes/Partials/Coin.tscn" type="PackedScene" id=12]
-[ext_resource path="res://Scenes/Partials/Heart.tscn" type="PackedScene" id=13]
-[ext_resource path="res://Scenes/Partials/Teleport.tscn" type="PackedScene" id=14]
-[ext_resource path="res://Scenes/Objects/TrashCan.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Scenes/Traps/SpikeTrap.tscn" type="PackedScene" id=13]
 
 [sub_resource type="LineShape2D" id=1]
 
@@ -27,7 +25,7 @@ script = ExtResource( 1 )
 scale = Vector2( 0.5, 0.5 )
 tile_set = ExtResource( 3 )
 format = 1
-tile_data = PoolIntArray( 851988, 6, 0, 917509, 17, 0, 917518, 17, 0, 917521, 17, 0, 1048579, 17, 0, 1048600, 6, 0, 1310715, 17, 0, 1310719, 17, 0, 1245212, 6, 0, 1376287, 6, 0, 1507339, 17, 0, 2097183, 17, 0, 2097184, 17, 0, 2097188, 9, 0, 2097194, 24, 0, 2097197, 24, 0, 2097200, 24, 0, 2162742, 22, 0, 2162746, 23, 0, 2687042, 24, 0, 2687048, 24, 0, 2752580, 24, 0, 2818111, 24, 0, 2883633, 24, 0, 2883638, 24, 0, 2883641, 24, 0, 3080230, 24, 0, 3080234, 24, 0, 3080236, 24, 0, 3407904, 24, 0, 3604507, 24, 0, 3932176, 24, 0 )
+tile_data = PoolIntArray( 917510, 10, 0, 917514, 10, 0, 917518, 10, 0, 917522, 10, 0, 917538, 10, 0, 1179666, 10, 0, 1179682, 10, 0, 1441810, 10, 0, 1441826, 10, 0, 1703954, 10, 0, 1703958, 10, 0, 1703966, 10, 0, 1703970, 10, 0, 1966098, 10, 0, 1966114, 10, 0, 2228242, 10, 0, 2228258, 10, 0, 2490386, 10, 0, 2490402, 10, 0, 2752530, 10, 0, 2752534, 10, 0, 2752538, 10, 0, 2752546, 10, 0, 3014674, 10, 0, 3014690, 10, 0, 3276818, 10, 0, 3276834, 10, 0, 3538962, 10, 0, 3538978, 10, 0, 3801106, 10, 0, 3801114, 10, 0, 3801118, 10, 0, 3801122, 10, 0, 4063250, 10, 0, 4063266, 10, 0, 4325394, 10, 0, 4325410, 10, 0, 4587538, 10, 0, 4587542, 10, 0, 4587546, 10, 0, 4587550, 10, 0, 4587554, 10, 0 )
 script = ExtResource( 4 )
 reset_map = false
 
@@ -38,7 +36,7 @@ editor/display_folded = true
 
 [node name="DeathZone" type="Area2D" parent="."]
 editor/display_folded = true
-position = Vector2( 100, 2000 )
+position = Vector2( 60.3464, 2845.94 )
 scale = Vector2( 10000, 1 )
 script = ExtResource( 6 )
 
@@ -51,29 +49,24 @@ autoplay = true
 script = ExtResource( 8 )
 
 [node name="LevelWarp" parent="." instance=ExtResource( 9 )]
-position = Vector2( 336.615, 628.365 )
+position = Vector2( 357.278, 285.371 )
 gravity_point = true
 next_world = ExtResource( 10 )
 
 [node name="PlayerStart" parent="." instance=ExtResource( 11 )]
 position = Vector2( 186.152, 326.404 )
 
-[node name="Coin" parent="PlayerStart" instance=ExtResource( 12 )]
-position = Vector2( 822.342, 577.95 )
+[node name="Coin" parent="." instance=ExtResource( 12 )]
+position = Vector2( 964.16, 2117.61 )
 
-[node name="Coin2" parent="PlayerStart" instance=ExtResource( 12 )]
-position = Vector2( 1694.27, 595.654 )
+[node name="Coin2" parent="." instance=ExtResource( 12 )]
+position = Vector2( 816.004, 2117.61 )
 
-[node name="Heart" parent="PlayerStart" instance=ExtResource( 13 )]
-position = Vector2( 308.923, 1494.14 )
+[node name="Coin3" parent="." instance=ExtResource( 12 )]
+position = Vector2( 704.887, 2106.49 )
 
-[node name="Teleport" parent="PlayerStart" instance=ExtResource( 14 )]
-position = Vector2( 848.899, 1210.87 )
-teleport_target = NodePath("TrashCan")
+[node name="SpikeTrap" parent="." instance=ExtResource( 13 )]
+position = Vector2( 966.969, 700.714 )
 
-[node name="TrashCan" parent="PlayerStart/Teleport" instance=ExtResource( 15 )]
-position = Vector2( 358.509, -650.627 )
-
-[node name="Teleport" parent="PlayerStart/Teleport" instance=ExtResource( 14 )]
-position = Vector2( 1270.27, -340.804 )
-teleport_target = NodePath("..")
+[node name="SpikeTrap2" parent="." instance=ExtResource( 13 )]
+position = Vector2( 1083.41, 322.276 )

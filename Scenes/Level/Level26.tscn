@@ -1,0 +1,97 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://Scripts/Game/LevelManager.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/Partials/LevelEnd.tscn" type="PackedScene" id=2]
+[ext_resource path="res://TileSet/ForestTileSet.tres" type="TileSet" id=3]
+[ext_resource path="res://Scripts/Tools/TileMap.gd" type="Script" id=4]
+[ext_resource path="res://Scenes/UI/IngameUI.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scripts/Game/DeathZone.gd" type="Script" id=6]
+[ext_resource path="res://Assets/Audio/Loop.wav" type="AudioStream" id=7]
+[ext_resource path="res://Scripts/Game/AudioStreamPlayer.gd" type="Script" id=8]
+[ext_resource path="res://Scenes/Partials/LevelWarp.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Scenes/Level/Level2.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Scenes/Partials/PlayerStart.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Scenes/Partials/Coin.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Scenes/Traps/SpikeTrap.tscn" type="PackedScene" id=13]
+
+[sub_resource type="LineShape2D" id=1]
+
+[node name="Level1" type="Node2D"]
+position = Vector2( 27.7053, -25.1865 )
+script = ExtResource( 1 )
+
+[node name="LevelEnd" parent="." instance=ExtResource( 2 )]
+
+[node name="TileMap" type="TileMap" parent="."]
+scale = Vector2( 0.5, 0.5 )
+tile_set = ExtResource( 3 )
+format = 1
+tile_data = PoolIntArray( 917510, 10, 0, 917514, 10, 0, 917518, 10, 0, 917522, 10, 0, 917538, 10, 0, 1114164, 3, 0, 1114168, 3, 0, 1114172, 3, 0, 1114176, 3, 0, 1114185, 3, 0, 1114189, 3, 0, 1114193, 3, 0, 1114208, 3, 0, 1179666, 10, 0, 1179682, 10, 0, 1376320, 3, 0, 1376329, 3, 0, 1376348, 3, 0, 1441810, 10, 0, 1441826, 10, 0, 1638464, 3, 0, 1638488, 3, 0, 1703954, 10, 0, 1703958, 10, 0, 1703966, 10, 0, 1703970, 10, 0, 1769538, 32, 0, 1900608, 3, 0, 1900628, 3, 0, 1966098, 10, 0, 1966114, 10, 0, 2162752, 3, 0, 2162756, 3, 0, 2162760, 3, 0, 2162764, 3, 0, 2162768, 3, 0, 2228242, 10, 0, 2228258, 10, 0, 2490386, 10, 0, 2490402, 10, 0, 2752530, 10, 0, 2752534, 10, 0, 2752538, 10, 0, 2752546, 10, 0, 3014674, 10, 0, 3014690, 10, 0, 3276818, 10, 0, 3276834, 10, 0, 3538962, 10, 0, 3538978, 10, 0, 3801106, 10, 0, 3801114, 10, 0, 3801118, 10, 0, 3801122, 10, 0, 4063250, 10, 0, 4063266, 10, 0, 4325394, 10, 0, 4325410, 10, 0, 4587538, 10, 0, 4587542, 10, 0, 4587546, 10, 0, 4587550, 10, 0, 4587554, 10, 0 )
+script = ExtResource( 4 )
+reset_map = false
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+editor/display_folded = true
+
+[node name="IngameUI" parent="CanvasLayer" instance=ExtResource( 5 )]
+
+[node name="DeathZone" type="Area2D" parent="."]
+editor/display_folded = true
+position = Vector2( 60.3464, 2845.94 )
+scale = Vector2( 10000, 1 )
+script = ExtResource( 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DeathZone"]
+shape = SubResource( 1 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 7 )
+autoplay = true
+script = ExtResource( 8 )
+
+[node name="LevelWarp" parent="." instance=ExtResource( 9 )]
+position = Vector2( 357.278, 285.371 )
+gravity_point = true
+next_world = ExtResource( 10 )
+
+[node name="PlayerStart" parent="." instance=ExtResource( 11 )]
+position = Vector2( 186.152, 326.404 )
+
+[node name="Coin" parent="." instance=ExtResource( 12 )]
+position = Vector2( 964.16, 2117.61 )
+
+[node name="Coin2" parent="." instance=ExtResource( 12 )]
+position = Vector2( 816.004, 2117.61 )
+
+[node name="Coin3" parent="." instance=ExtResource( 12 )]
+position = Vector2( 704.887, 2106.49 )
+
+[node name="SpikeTrap" parent="." instance=ExtResource( 13 )]
+position = Vector2( 966.969, 700.714 )
+
+[node name="SpikeTrap3" parent="." instance=ExtResource( 13 )]
+position = Vector2( 2159.82, 934.922 )
+
+[node name="SpikeTrap2" parent="." instance=ExtResource( 13 )]
+position = Vector2( 2944.38, 545.789 )
+
+[node name="Coin4" parent="." instance=ExtResource( 12 )]
+position = Vector2( 2190.04, 583.569 )
+
+[node name="Coin5" parent="." instance=ExtResource( 12 )]
+position = Vector2( 2195.08, 728.392 )
+
+[node name="Coin6" parent="." instance=ExtResource( 12 )]
+position = Vector2( 2368.86, 932.403 )
+
+[node name="Coin7" parent="." instance=ExtResource( 12 )]
+position = Vector2( 2517.46, 928.625 )
+
+[node name="SpikeTrap4" parent="." instance=ExtResource( 13 )]
+position = Vector2( 2533.59, 420.549 )
+
+[node name="SpikeTrap5" parent="." instance=ExtResource( 13 )]
+position = Vector2( 3037.49, 398.991 )
+
+[node name="SpikeTrap6" parent="." instance=ExtResource( 13 )]
+position = Vector2( 2067.41, 460.969 )

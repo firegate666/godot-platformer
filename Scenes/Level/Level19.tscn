@@ -28,6 +28,7 @@ tile_set = ExtResource( 3 )
 format = 1
 tile_data = PoolIntArray( 3932115, 1, 0, 3932122, 1, 0, 3932129, 1, 0, 3932137, 1, 0, 3932146, 1, 0, 3932158, 16, 0, 3866630, 16, 0, 3866637, 16, 0, 3866644, 16, 0, 3866651, 16, 0, 3866658, 16, 0, 3866665, 16, 0, 3866672, 16, 0, 3866679, 16, 0 )
 script = ExtResource( 4 )
+reset_map = false
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 editor/display_folded = true
